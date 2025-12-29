@@ -1,5 +1,5 @@
 :root {
-  /* Primary colors - your purple/violet theme */
+  /* Primary colors - works for both themes */
   --ifm-color-primary: #8b5cf6;
   --ifm-color-primary-dark: #7c3aed;
   --ifm-color-primary-darker: #6d28d9;
@@ -7,13 +7,16 @@
   --ifm-color-primary-light: #a78bfa;
   --ifm-color-primary-lighter: #c4b5fd;
   --ifm-color-primary-lightest: #ddd6fe;
-  
-  /* Dark mode colors */
-  --ifm-background-color: #0a0a0a;
-  --ifm-navbar-background-color: #050505;
 }
 
+/* Dark mode only */
 [data-theme='dark'] {
   --ifm-background-color: #0a0a0a;
   --ifm-background-surface-color: #111827;
+  --ifm-navbar-background-color: #050505;
+}
+
+/* Light mode (optional overrides) */
+[data-theme='light'] {
+  --ifm-navbar-background-color: #ffffff;
 }
