@@ -1,0 +1,19 @@
+:root {
+  /* Primary colors - your purple/violet theme */
+  --ifm-color-primary: #8b5cf6;
+  --ifm-color-primary-dark: #7c3aed;
+  --ifm-color-primary-darker: #6d28d9;
+  --ifm-color-primary-darkest: #5b21b6;
+  --ifm-color-primary-light: #a78bfa;
+  --ifm-color-primary-lighter: #c4b5fd;
+  --ifm-color-primary-lightest: #ddd6fe;
+  
+  /* Dark mode colors */
+  --ifm-background-color: #0a0a0a;
+  --ifm-navbar-background-color: #050505;
+}
+
+[data-theme='dark'] {
+  --ifm-background-color: #0a0a0a;
+  --ifm-background-surface-color: #111827;
+}
