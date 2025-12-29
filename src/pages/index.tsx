@@ -35,11 +35,11 @@ export default function Home() {
           </p>
           
           <div className={styles.buttons}>
-            <a href="/V3-External-API/docs/intro" className={styles.primaryBtn}>
+            <a href="/V3-External-Api-Docs/docs/intro" className={styles.primaryBtn}>
               Read the Docs
               <span className={styles.arrow}>→</span>
             </a>
-            <a href="https://github.com/Yukthi-Systems/V3-External-API" className={styles.secondaryBtn} target="_blank">
+            <a href="https://github.com/Yukthi-Systems/V3-External-Api-Docs" className={styles.secondaryBtn} target="_blank">
               View on GitHub
             </a>
           </div>

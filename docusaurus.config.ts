@@ -30,7 +30,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/Yukthi-Systems/V3-External-API/tree/main/',
+          editUrl: 'https://github.com/Yukthi-Systems/V3-External-Api-Docs/tree/main/',
         },
         blog: false,
         theme: {
@@ -59,7 +59,7 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://github.com/Yukthi-Systems/V3-External-API',
+          href: 'https://github.com/Yukthi-Systems/V3-External-Api-Docs',
           label: 'GitHub',
           position: 'right',
         },
@@ -86,7 +86,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/Yukthi-Systems/V3-External-API',
+              href: 'https://github.com/Yukthi-Systems/V3-External-Api-Docs',
             },
           ],
         },
