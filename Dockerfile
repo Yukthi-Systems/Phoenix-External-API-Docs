@@ -19,28 +19,25 @@ RUN npm run build
 # Stage 2: Create the final image
 FROM node:21.5-alpine3.18
 
+# Set the working directory within the container
 WORKDIR /app
+
+
+# Install 'serve' to serve the built application
 RUN npm install -g serve
+
+# Install wget (needed for health check)
 RUN apk add --no-cache wget
 
-# Copy the built application
+# Copy the built application files from the builder stage
 COPY --from=builder /app/dist /app/dist
 
-# --- NEW STEPS ---
-# Copy the shell script from your source
-COPY env.sh /app/env.sh
-
-# Make sure it's executable
-RUN chmod +x /app/env.sh
-
+# Expose port 3000 for the web server
 EXPOSE 3000
 
-# Health check (remains same)
+# Health check command (optional)
 HEALTHCHECK --interval=30s --timeout=3s \
   CMD wget --quiet --tries=1 --spider http://localhost:3000 || exit 1
 
-# Use the shell script as the entrypoint wrapper
-ENTRYPOINT ["/app/env.sh"]
-
-# The CMD is passed to the ENTRYPOINT (exec "$@")
+# Start the application using 'serve'
 CMD ["serve", "-s", "dist", "-l", "3000"]
