@@ -35,7 +35,7 @@ export default function Home() {
           </p>
           
           <div className={styles.buttons}>
-            <a href="/V3-External-Api-Docs/docs/intro" className={styles.primaryBtn}>
+            <a href="/docs/intro" className={styles.primaryBtn}>
               Read the Docs
               <span className={styles.arrow}>→</span>
             </a>

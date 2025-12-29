@@ -1,41 +1,100 @@
-# Website
+# V3 External API Documentation
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Complete API documentation for the V3 External API, built with [Docusaurus](https://docusaurus.io/).
 
-## Installation
-
-```bash
-yarn
-```
-
-## Local Development
+## Quick Start
 
 ```bash
-yarn start
+npm install
+npm start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Visit `http://localhost:3000`
 
-## Build
+## Development
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
 
 ```bash
-yarn build
+npm install
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
+### Local Development
 
 ```bash
-USE_SSH=true yarn deploy
+npm start
 ```
 
-Not using SSH:
+Starts dev server at `http://localhost:3000`. Hot reload enabled.
+
+### Build
 
 ```bash
-GIT_USER=<Your GitHub username> yarn deploy
+npm run build
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Generates static files in `build/` directory.
+
+### Preview Build
+
+```bash
+npm run serve
+```
+
+Preview production build locally.
+
+## Docker Deployment
+
+### Build Image
+
+```bash
+docker build -t v3-docs .
+```
+
+### Run Container
+
+```bash
+docker-compose up -d
+```
+
+Access at `http://localhost:3000`
+
+
+## Versioning
+
+Create new version:
+
+```bash
+npm run docusaurus docs:version 1.0.0
+```
+
+This snapshots current docs as version 1.0.0.
+
+## Configuration
+
+- `docusaurus.config.ts` - Main config
+- `sidebars.ts` - Sidebar navigation
+- `src/css/custom.css` - Custom styles
+
+
+## Project Links
+
+- **Repository**: [Yukthi-Systems/V3-External-Api-Docs](https://github.com/Yukthi-Systems/V3-External-Api-Docs)
+- **Live Docs**: `https://docs.yourdomain.com`
+
+## Contributing
+
+1. Fork the repository
+2. Create feature branch: `git checkout -b feature/new-docs`
+3. Commit changes: `git commit -am 'Add new documentation'`
+4. Push: `git push origin feature/new-docs`
+5. Open Pull Request
+
+## License
+
+Copyright © 2025 Yukthi Systems
