@@ -1,0 +1,1762 @@
+{
+	"info": {
+		"_postman_id": "d41ca6ce-2710-4610-b37e-484d488007bd",
+		"name": "V3 External API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30803660"
+	},
+	"item": [
+		{
+			"name": "Health",
+			"item": [
+				{
+					"name": "Check All Health Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/health/status",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"health",
+								"status"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/health/status",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"health",
+										"status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "41"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 27 Dec 2025 05:27:30 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"api\": \"OK\",\n    \"cache\": \"OK\",\n    \"database\": \"OK\"\n}"
+						},
+						{
+							"name": "Failed Case",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/health/status",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"health",
+										"status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "47"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 27 Dec 2025 05:28:20 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"api\": \"OK\",\n    \"cache\": \"ERROR\",\n    \"database\": \"ERROR\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Self Checks",
+			"item": [
+				{
+					"name": "Check Status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/self/whoami",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"self",
+								"whoami"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Check Status",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/self/whoami",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"self",
+										"whoami"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "103"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 27 Dec 2025 09:41:10 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"permissions\": [\n        \"domain:view\",\n        \"mailbox:view\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete the Cached API Key",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/self/cache",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"self",
+								"cache"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/self/cache",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"self",
+										"cache"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "41"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 28 Dec 2025 03:20:26 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"API key cache entry deleted\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Domains",
+			"item": [
+				{
+					"name": "List All Domains",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/domains/list?page=1&page_size=10",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"domains",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List All Domains",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/domains/list?page=1&page_size=10",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"domains",
+										"list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "page_size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "8238"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 27 Dec 2025 10:59:37 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"domain_name\": \"testdomain127.com\",\n        \"details\": {\n            \"address\": \"Admin Address 127\",\n            \"description\": \"Test domain 127 for webmail and load testing\"\n        },\n        \"quota_allocated\": \"5.00\",\n        \"quota_utilized\": \"0.00\",\n        \"max_mailboxes\": 15,\n        \"is_active\": true,\n        \"spam_destination\": \"Folder\",\n        \"spam_destination_properties\": {\n            \"description\": \"Standard spam filtering policy for domain\",\n            \"folder_name\": \"Junk\"\n        },\n        \"filter_policy_id\": null,\n        \"attachment_policy_id\": null,\n        \"catch_all\": false,\n        \"catch_all_forward_to_email\": null,\n        \"is_hybrid\": false,\n        \"connector_properties\": {\n            \"description\": \"Default Hybrid Connector\",\n            \"fqdn\": \"\",\n            \"ipv4\": \"\",\n            \"ipv6\": \"\",\n            \"port\": -1\n        },\n        \"max_password_age\": 91,\n        \"max_password_age_properties\": {\n            \"enable_max_password_age\": true,\n            \"max_password_age\": 91,\n            \"notify_at\": [\n                3,\n                6,\n                10\n            ]\n        },\n        \"session_timeout\": 30,\n        \"disclaimer_id\": null,\n        \"caution_id\": null,\n        \"created_at\": \"2025-12-22 08:33:55.025144+00\"\n    },\n    {\n        \"domain_name\": \"testdomain126.com\",\n        \"details\": {\n            \"address\": \"Admin Address 126\",\n            \"description\": \"Test domain 126 for webmail and load testing\"\n        },\n        \"quota_allocated\": \"5.00\",\n        \"quota_utilized\": \"0.00\",\n        \"max_mailboxes\": 15,\n        \"is_active\": true,\n        \"spam_destination\": \"Folder\",\n        \"spam_destination_properties\": {\n            \"description\": \"Standard spam filtering policy for domain\",\n            \"folder_name\": \"Junk\"\n        },\n        \"filter_policy_id\": null,\n        \"attachment_policy_id\": null,\n        \"catch_all\": false,\n        \"catch_all_forward_to_email\": null,\n        \"is_hybrid\": false,\n        \"connector_properties\": {\n            \"description\": \"Default Hybrid Connector\",\n            \"fqdn\": \"\",\n            \"ipv4\": \"\",\n            \"ipv6\": \"\",\n            \"port\": -1\n        },\n        \"max_password_age\": 90,\n        \"max_password_age_properties\": {\n            \"enable_max_password_age\": true,\n            \"max_password_age\": 90,\n            \"notify_at\": [\n                2,\n                5,\n                9\n            ]\n        },\n        \"session_timeout\": 30,\n        \"disclaimer_id\": null,\n        \"caution_id\": null,\n        \"created_at\": \"2025-12-22 08:33:54.469913+00\"\n    },\n    {\n        \"domain_name\": \"testdomain125.com\",\n        \"details\": {\n            \"address\": \"Admin Address 125\",\n            \"description\": \"Test domain 125 for webmail and load testing\"\n        },\n        \"quota_allocated\": \"5.00\",\n        \"quota_utilized\": \"0.00\",\n        \"max_mailboxes\": 15,\n        \"is_active\": true,\n        \"spam_destination\": \"Folder\",\n        \"spam_destination_properties\": {\n            \"description\": \"Standard spam filtering policy for domain\",\n            \"folder_name\": \"Junk\"\n        },\n        \"filter_policy_id\": null,\n        \"attachment_policy_id\": null,\n        \"catch_all\": false,\n        \"catch_all_forward_to_email\": null,\n        \"is_hybrid\": false,\n        \"connector_properties\": {\n            \"description\": \"Default Hybrid Connector\",\n            \"fqdn\": \"\",\n            \"ipv4\": \"\",\n            \"ipv6\": \"\",\n            \"port\": -1\n        },\n        \"max_password_age\": 94,\n        \"max_password_age_properties\": {\n            \"enable_max_password_age\": true,\n            \"max_password_age\": 94,\n            \"notify_at\": [\n                6,\n                9,\n                13\n            ]\n        },\n        \"session_timeout\": 30,\n        \"disclaimer_id\": null,\n        \"caution_id\": null,\n        \"created_at\": \"2025-12-22 08:33:53.924209+00\"\n    },\n    {\n        \"domain_name\": \"testdomain124.com\",\n        \"details\": {\n            \"address\": \"Admin Address 124\",\n            \"description\": \"Test domain 124 for webmail and load testing\"\n        },\n        \"quota_allocated\": \"5.00\",\n        \"quota_utilized\": \"0.00\",\n        \"max_mailboxes\": 15,\n        \"is_active\": true,\n        \"spam_destination\": \"Folder\",\n        \"spam_destination_properties\": {\n            \"description\": \"Standard spam filtering policy for domain\",\n            \"folder_name\": \"Junk\"\n        },\n        \"filter_policy_id\": null,\n        \"attachment_policy_id\": null,\n        \"catch_all\": false,\n        \"catch_all_forward_to_email\": null,\n        \"is_hybrid\": false,\n        \"connector_properties\": {\n            \"description\": \"Default Hybrid Connector\",\n            \"fqdn\": \"\",\n            \"ipv4\": \"\",\n            \"ipv6\": \"\",\n            \"port\": -1\n        },\n        \"max_password_age\": 93,\n        \"max_password_age_properties\": {\n            \"enable_max_password_age\": true,\n            \"max_password_age\": 93,\n            \"notify_at\": [\n                5,\n                8,\n                12\n            ]\n        },\n        \"session_timeout\": 30,\n        \"disclaimer_id\": null,\n        \"caution_id\": null,\n        \"created_at\": \"2025-12-22 08:33:53.37917+00\"\n    },\n    {\n        \"domain_name\": \"testdomain123.com\",\n        \"details\": {\n            \"address\": \"Admin Address 123\",\n            \"description\": \"Test domain 123 for webmail and load testing\"\n        },\n        \"quota_allocated\": \"5.00\",\n        \"quota_utilized\": \"0.00\",\n        \"max_mailboxes\": 15,\n        \"is_active\": true,\n        \"spam_destination\": \"Folder\",\n        \"spam_destination_properties\": {\n            \"description\": \"Standard spam filtering policy for domain\",\n            \"folder_name\": \"Junk\"\n        },\n        \"filter_policy_id\": null,\n        \"attachment_policy_id\": null,\n        \"catch_all\": false,\n        \"catch_all_forward_to_email\": null,\n        \"is_hybrid\": false,\n        \"connector_properties\": {\n            \"description\": \"Default Hybrid Connector\",\n            \"fqdn\": \"\",\n            \"ipv4\": \"\",\n            \"ipv6\": \"\",\n            \"port\": -1\n        },\n        \"max_password_age\": 92,\n        \"max_password_age_properties\": {\n            \"enable_max_password_age\": true,\n            \"max_password_age\": 92,\n            \"notify_at\": [\n                4,\n                7,\n                11\n            ]\n        },\n        \"session_timeout\": 30,\n        \"disclaimer_id\": null,\n        \"caution_id\": null,\n        \"created_at\": \"2025-12-22 08:33:52.811491+00\"\n    },\n    {\n        \"domain_name\": \"testdomain122.com\",\n        \"details\": {\n            \"address\": \"Admin Address 122\",\n            \"description\": \"Test domain 122 for webmail and load testing\"\n        },\n        \"quota_allocated\": \"5.00\",\n        \"quota_utilized\": \"0.00\",\n        \"max_mailboxes\": 15,\n        \"is_active\": true,\n        \"spam_destination\": \"Folder\",\n        \"spam_destination_properties\": {\n            \"description\": \"Standard spam filtering policy for domain\",\n            \"folder_name\": \"Junk\"\n        },\n        \"filter_policy_id\": null,\n        \"attachment_policy_id\": null,\n        \"catch_all\": false,\n        \"catch_all_forward_to_email\": null,\n        \"is_hybrid\": false,\n        \"connector_properties\": {\n            \"description\": \"Default Hybrid Connector\",\n            \"fqdn\": \"\",\n            \"ipv4\": \"\",\n            \"ipv6\": \"\",\n            \"port\": -1\n        },\n        \"max_password_age\": 91,\n        \"max_password_age_properties\": {\n            \"enable_max_password_age\": true,\n            \"max_password_age\": 91,\n            \"notify_at\": [\n                3,\n                6,\n                10\n            ]\n        },\n        \"session_timeout\": 30,\n        \"disclaimer_id\": null,\n        \"caution_id\": null,\n        \"created_at\": \"2025-12-22 08:33:52.239269+00\"\n    },\n    {\n        \"domain_name\": \"testdomain121.com\",\n        \"details\": {\n            \"address\": \"Admin Address 121\",\n            \"description\": \"Test domain 121 for webmail and load testing\"\n        },\n        \"quota_allocated\": \"5.00\",\n        \"quota_utilized\": \"0.00\",\n        \"max_mailboxes\": 15,\n        \"is_active\": true,\n        \"spam_destination\": \"Folder\",\n        \"spam_destination_properties\": {\n            \"description\": \"Standard spam filtering policy for domain\",\n            \"folder_name\": \"Junk\"\n        },\n        \"filter_policy_id\": null,\n        \"attachment_policy_id\": null,\n        \"catch_all\": false,\n        \"catch_all_forward_to_email\": null,\n        \"is_hybrid\": false,\n        \"connector_properties\": {\n            \"description\": \"Default Hybrid Connector\",\n            \"fqdn\": \"\",\n            \"ipv4\": \"\",\n            \"ipv6\": \"\",\n            \"port\": -1\n        },\n        \"max_password_age\": 90,\n        \"max_password_age_properties\": {\n            \"enable_max_password_age\": true,\n            \"max_password_age\": 90,\n            \"notify_at\": [\n                2,\n                5,\n                9\n            ]\n        },\n        \"session_timeout\": 30,\n        \"disclaimer_id\": null,\n        \"caution_id\": null,\n        \"created_at\": \"2025-12-22 08:33:51.685535+00\"\n    },\n    {\n        \"domain_name\": \"testdomain120.com\",\n        \"details\": {\n            \"address\": \"Admin Address 120\",\n            \"description\": \"Test domain 120 for webmail and load testing\"\n        },\n        \"quota_allocated\": \"5.00\",\n        \"quota_utilized\": \"0.00\",\n        \"max_mailboxes\": 15,\n        \"is_active\": true,\n        \"spam_destination\": \"Folder\",\n        \"spam_destination_properties\": {\n            \"description\": \"Standard spam filtering policy for domain\",\n            \"folder_name\": \"Junk\"\n        },\n        \"filter_policy_id\": null,\n        \"attachment_policy_id\": null,\n        \"catch_all\": false,\n        \"catch_all_forward_to_email\": null,\n        \"is_hybrid\": false,\n        \"connector_properties\": {\n            \"description\": \"Default Hybrid Connector\",\n            \"fqdn\": \"\",\n            \"ipv4\": \"\",\n            \"ipv6\": \"\",\n            \"port\": -1\n        },\n        \"max_password_age\": 94,\n        \"max_password_age_properties\": {\n            \"enable_max_password_age\": true,\n            \"max_password_age\": 94,\n            \"notify_at\": [\n                6,\n                9,\n                13\n            ]\n        },\n        \"session_timeout\": 30,\n        \"disclaimer_id\": null,\n        \"caution_id\": null,\n        \"created_at\": \"2025-12-22 08:33:51.133787+00\"\n    },\n    {\n        \"domain_name\": \"testdomain119.com\",\n        \"details\": {\n            \"address\": \"Admin Address 119\",\n            \"description\": \"Test domain 119 for webmail and load testing\"\n        },\n        \"quota_allocated\": \"5.00\",\n        \"quota_utilized\": \"0.00\",\n        \"max_mailboxes\": 15,\n        \"is_active\": true,\n        \"spam_destination\": \"Folder\",\n        \"spam_destination_properties\": {\n            \"description\": \"Standard spam filtering policy for domain\",\n            \"folder_name\": \"Junk\"\n        },\n        \"filter_policy_id\": null,\n        \"attachment_policy_id\": null,\n        \"catch_all\": false,\n        \"catch_all_forward_to_email\": null,\n        \"is_hybrid\": false,\n        \"connector_properties\": {\n            \"description\": \"Default Hybrid Connector\",\n            \"fqdn\": \"\",\n            \"ipv4\": \"\",\n            \"ipv6\": \"\",\n            \"port\": -1\n        },\n        \"max_password_age\": 93,\n        \"max_password_age_properties\": {\n            \"enable_max_password_age\": true,\n            \"max_password_age\": 93,\n            \"notify_at\": [\n                5,\n                8,\n                12\n            ]\n        },\n        \"session_timeout\": 30,\n        \"disclaimer_id\": null,\n        \"caution_id\": null,\n        \"created_at\": \"2025-12-22 08:33:50.581642+00\"\n    },\n    {\n        \"domain_name\": \"testdomain118.com\",\n        \"details\": {\n            \"address\": \"Admin Address 118\",\n            \"description\": \"Test domain 118 for webmail and load testing\"\n        },\n        \"quota_allocated\": \"5.00\",\n        \"quota_utilized\": \"0.00\",\n        \"max_mailboxes\": 15,\n        \"is_active\": true,\n        \"spam_destination\": \"Folder\",\n        \"spam_destination_properties\": {\n            \"description\": \"Standard spam filtering policy for domain\",\n            \"folder_name\": \"Junk\"\n        },\n        \"filter_policy_id\": null,\n        \"attachment_policy_id\": null,\n        \"catch_all\": false,\n        \"catch_all_forward_to_email\": null,\n        \"is_hybrid\": false,\n        \"connector_properties\": {\n            \"description\": \"Default Hybrid Connector\",\n            \"fqdn\": \"\",\n            \"ipv4\": \"\",\n            \"ipv6\": \"\",\n            \"port\": -1\n        },\n        \"max_password_age\": 92,\n        \"max_password_age_properties\": {\n            \"enable_max_password_age\": true,\n            \"max_password_age\": 92,\n            \"notify_at\": [\n                4,\n                7,\n                11\n            ]\n        },\n        \"session_timeout\": 30,\n        \"disclaimer_id\": null,\n        \"caution_id\": null,\n        \"created_at\": \"2025-12-22 08:33:50.003283+00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Total Domains Count",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/domains/count",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"domains",
+								"count"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Total Domains Count",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/domains/count",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"domains",
+										"count"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "78"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 27 Dec 2025 11:00:28 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"total_domains\": 141\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Specific Domain Info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/domains/detail/devtest11.yukthi.net",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"domains",
+								"detail",
+								"devtest11.yukthi.net"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Specific Domain Info",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/domains/detail/nekonik.com",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"domains",
+										"detail",
+										"nekonik.com"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "722"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 27 Dec 2025 11:02:12 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"nekonik.com\",\n    \"details\": {\n        \"address\": \"Nik\",\n        \"description\": \"Nik\"\n    },\n    \"quota_allocated\": \"7.00\",\n    \"quota_utilized\": \"0.40\",\n    \"max_mailboxes\": 7,\n    \"is_active\": true,\n    \"spam_destination\": \"Folder\",\n    \"spam_destination_properties\": {\n        \"description\": \"Nik\",\n        \"folder_name\": \"Nik\"\n    },\n    \"filter_policy_id\": null,\n    \"attachment_policy_id\": null,\n    \"catch_all\": false,\n    \"catch_all_forward_to_email\": null,\n    \"is_hybrid\": false,\n    \"connector_properties\": {\n        \"description\": \"Default Hybrid Connector\",\n        \"fqdn\": \"\",\n        \"ipv4\": \"\",\n        \"ipv6\": \"\",\n        \"port\": -1\n    },\n    \"max_password_age\": 90,\n    \"max_password_age_properties\": {\n        \"enable_max_password_age\": true,\n        \"max_password_age\": 90,\n        \"notify_at\": [\n            2,\n            5,\n            9\n        ]\n    },\n    \"session_timeout\": 720,\n    \"disclaimer_id\": null,\n    \"caution_id\": null,\n    \"created_at\": \"2025-07-30 10:38:37.531305+00\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cautions",
+			"item": [
+				{
+					"name": "Count Total Cautions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/cautions/count",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"cautions",
+								"count"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/cautions/count",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"cautions",
+										"count"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "78"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 27 Dec 2025 11:38:58 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"total_cautions\": 32\n}"
+						}
+					]
+				},
+				{
+					"name": "List cautions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/cautions/list?page=1&page_size=10",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"cautions",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/cautions/list?page=1&page_size=10",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"cautions",
+										"list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "page_size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "5405"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 27 Dec 2025 11:40:19 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"caution_id\": \"b9a18559-e9a4-47f8-beff-2e00566c6bd5\",\n        \"caution_name\": \"Data Privacy Alert1233\",\n        \"details\": {\n            \"description\": \"Desc\",\n            \"notes\": \"Non mandatory stuff\",\n            \"severity\": \"Medium\"\n        },\n        \"html_content\": \"<html>\\n  <body>\\n    <table role=\\\"presentation\\\" border=\\\"0\\\" cellpadding=\\\"0\\\" cellspacing=\\\"0\\\" width=\\\"100%\\\">\\n      <tr>\\n        <td style=\\\"font-size: 12px; color: #666; text-align: center; padding: 20px;\\\">\\n          Some text that needs to be <br> Some text that needs to be <br> Some text that needs to be <br> Some text that needs to be\\n        </td>\\n      </tr>\\n    </table>\\n  </body>\\n</html>\",\n        \"text_content\": \"Some text that needs to be Some text that needs to be Some text that needs to be Some text that needs to be \",\n        \"created_at\": \"2025-08-26 05:51:24.682038+00\",\n        \"updated_at\": \"2025-12-15 10:27:56.156661+00\"\n    },\n    {\n        \"caution_id\": \"9365d21b-7472-40f6-a546-889aa1904737\",\n        \"caution_name\": \"Imadportant Security Notice\",\n        \"details\": {\n            \"description\": \"Critical security update notification\",\n            \"notes\": \"Requires immediate user attention\",\n            \"severity\": \"High\"\n        },\n        \"html_content\": \"<p>This is an important <strong>security notice</strong>.</p>\",\n        \"text_content\": \"This is an important security notice.\",\n        \"created_at\": \"2025-11-26 07:52:40.153115+00\",\n        \"updated_at\": \"2025-11-26 07:52:40.153115+00\"\n    },\n    {\n        \"caution_id\": \"3e4e1e84-9b9d-481d-921a-8067a7922a43\",\n        \"caution_name\": \"Important Security Notice test\",\n        \"details\": {\n            \"description\": \"Critical security update notification\",\n            \"notes\": \"Requires immediate user attention\",\n            \"severity\": \"High\"\n        },\n        \"html_content\": \"<p>This is an important <strong>security notice</strong>.</p>\",\n        \"text_content\": \"This is an important security notice.\",\n        \"created_at\": \"2025-11-06 07:14:32.184317+00\",\n        \"updated_at\": \"2025-11-06 07:14:32.184317+00\"\n    },\n    {\n        \"caution_id\": \"2e88edf0-d887-4415-a7d0-d06b350312d9\",\n        \"caution_name\": \"Internal use caution\",\n        \"details\": {\n            \"description\": \"No use\",\n            \"notes\": \"\",\n            \"severity\": \"Medium\"\n        },\n        \"html_content\": \"<table cellpadding=\\\"0\\\" cellspacing=\\\"0\\\" width=\\\"100%\\\">\\n  <tr>\\n    <td>\\n      <table cellpadding=\\\"0\\\" cellspacing=\\\"0\\\" border=\\\"0\\\" width=\\\"100%\\\" style=\\\"background-color: #f2f2f2;\\\">\\n        <tr>\\n          <td style=\\\"padding: 20px;\\\">\\n            <p style=\\\"font: normal 12px Arial, sans-serif; color: #666666; margin: 0;\\\">This email is intended for internal use within [Your Company Name]. If you have received this message in error, please inform the sender and permanently delete it. Unauthorized sharing or disclosure of internal communication may result in disciplinary or legal action.</p>\\n            <p style=\\\"font: normal 10px Arial, sans-serif; color: #999999; margin: 0; padding-top: 10px;\\\">[Your Company Name] - [Your Company Address] - [Your Company Telephone Number] - [Your Company Email Address]</p>\\n          </td>\\n        </tr>\\n      </table>\\n    </td>\\n  </tr>\\n</table>\",\n        \"text_content\": \"This email is intended for internal use within [Your Company Name]. If you have received this message in error, please inform the sender and permanently delete it. Unauthorized sharing or disclosure of internal communication may result in disciplinary or legal action.\",\n        \"created_at\": \"2025-10-16 10:14:02.649639+00\",\n        \"updated_at\": \"2025-10-17 03:42:17.711371+00\"\n    },\n    {\n        \"caution_id\": \"35c25788-24fb-48af-9e48-f43b4c47558e\",\n        \"caution_name\": \"testexamcaution\",\n        \"details\": {\n            \"description\": \"testexamcautiondescription\",\n            \"notes\": \"testexamnotes\",\n            \"severity\": \"Low\"\n        },\n        \"html_content\": \"h1>incorrect closing tag<><><><></jiuefhnfcuehg356437457334t4t4t575675y<jehrjsnd>htmlcontent\",\n        \"text_content\": \"testexamtextcontent\",\n        \"created_at\": \"2025-09-04 17:31:41.202538+00\",\n        \"updated_at\": \"2025-09-04 17:31:41.202538+00\"\n    },\n    {\n        \"caution_id\": \"3a1d8b87-05b2-49a6-bac7-6db053642639\",\n        \"caution_name\": \"Data Privacy Alert22211\",\n        \"details\": {\n            \"description\": \"Desc3\",\n            \"notes\": \"Non mandatory stuff\",\n            \"severity\": \"Low\"\n        },\n        \"html_content\": \"h1>incorrect closing tag<><><><></jiuefhnfcuehg356437457334t4t4t575675y<jehrjsnd>ldjfrefndjcnuerhgdjc djgfhufvnxmc \\n\",\n        \"text_content\": \"Some text<h1><h2>\",\n        \"created_at\": \"2025-08-26 05:51:27.148106+00\",\n        \"updated_at\": \"2025-08-26 05:54:27.232152+00\"\n    },\n    {\n        \"caution_id\": \"67712331-af85-41ee-8c7c-906c41dcad48\",\n        \"caution_name\": \"Data Privacy Alert221\",\n        \"details\": {\n            \"description\": \"Desv2\",\n            \"notes\": \"Non mandatory stuff\",\n            \"severity\": \"Low\"\n        },\n        \"html_content\": \"<h1>incorrect closing tag</h2>\",\n        \"text_content\": \"Some text\",\n        \"created_at\": \"2025-08-26 05:51:26.739082+00\",\n        \"updated_at\": \"2025-08-26 05:51:26.739082+00\"\n    },\n    {\n        \"caution_id\": \"206f8ace-df1f-4279-b472-8e9446262bf8\",\n        \"caution_name\": \"Data Privacy Alert21\",\n        \"details\": {\n            \"description\": \"Desc1\",\n            \"notes\": \"Non mandatory stuff\",\n            \"severity\": \"Low\"\n        },\n        \"html_content\": \"<h1>incorrect closing tag</h2>\",\n        \"text_content\": \"Some text\",\n        \"created_at\": \"2025-08-26 05:51:26.328758+00\",\n        \"updated_at\": \"2025-08-26 05:51:26.328758+00\"\n    },\n    {\n        \"caution_id\": \"9d221946-cc7b-41fe-8115-e92fdb636275\",\n        \"caution_name\": \"Data Privacy Alert11122\",\n        \"details\": {\n            \"description\": \"Desc\",\n            \"notes\": \"Non mandatory stuff\",\n            \"severity\": \"Low\"\n        },\n        \"html_content\": \"<h1>incorrect closing tag</h2>\",\n        \"text_content\": \"Some text\",\n        \"created_at\": \"2025-08-26 05:51:25.915647+00\",\n        \"updated_at\": \"2025-08-26 05:51:25.915647+00\"\n    },\n    {\n        \"caution_id\": \"e8219b04-93e9-4199-b14a-ccceb6f4cd31\",\n        \"caution_name\": \"Data Privacy Alert1112\",\n        \"details\": {\n            \"description\": \"Desv2\",\n            \"notes\": \"Non mandatory stuff\",\n            \"severity\": \"Low\"\n        },\n        \"html_content\": \"<h1>incorrect closing tag</h2>\",\n        \"text_content\": \"Some text\",\n        \"created_at\": \"2025-08-26 05:51:25.502916+00\",\n        \"updated_at\": \"2025-08-26 05:51:25.502916+00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Specific Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/cautions/detail/b9a18559-e9a4-47f8-beff-2e00566c6bd5",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"cautions",
+								"detail",
+								"b9a18559-e9a4-47f8-beff-2e00566c6bd5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/cautions/detail/b9a18559-e9a4-47f8-beff-2e00566c6bd5",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"cautions",
+										"detail",
+										"b9a18559-e9a4-47f8-beff-2e00566c6bd5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "822"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 27 Dec 2025 11:42:27 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"caution_id\": \"b9a18559-e9a4-47f8-beff-2e00566c6bd5\",\n    \"caution_name\": \"Data Privacy Alert1233\",\n    \"details\": {\n        \"description\": \"Desc\",\n        \"notes\": \"Non mandatory stuff\",\n        \"severity\": \"Medium\"\n    },\n    \"html_content\": \"<html>\\n  <body>\\n    <table role=\\\"presentation\\\" border=\\\"0\\\" cellpadding=\\\"0\\\" cellspacing=\\\"0\\\" width=\\\"100%\\\">\\n      <tr>\\n        <td style=\\\"font-size: 12px; color: #666; text-align: center; padding: 20px;\\\">\\n          Some text that needs to be <br> Some text that needs to be <br> Some text that needs to be <br> Some text that needs to be\\n        </td>\\n      </tr>\\n    </table>\\n  </body>\\n</html>\",\n    \"text_content\": \"Some text that needs to be Some text that needs to be Some text that needs to be Some text that needs to be \",\n    \"created_at\": \"2025-08-26 05:51:24.682038+00\",\n    \"updated_at\": \"2025-12-15 10:27:56.156661+00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new caution",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"caution_name\": \"Cats are cool 321\",\n    \"details\" : {\n        \"notes\": \"Non mandatory stuff\",\n        \"severity\": \"Medium\",\n        \"description\": \"Desc\"\n    },\n    \"html_content\": \"<?>\",\n    \"text_content\": \"IDK man its just a test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/cautions/create",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"cautions",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"caution_name\": \"Cats are cool 321\",\n    \"details\" : {\n        \"notes\": \"Non mandatory stuff\",\n        \"severity\": \"Medium\",\n        \"description\": \"Desc\"\n    },\n    \"html_content\": \"<?>\",\n    \"text_content\": \"IDK man its just a test\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/cautions/create",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"cautions",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "98"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 28 Dec 2025 03:46:23 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Caution created successfully\",\n    \"new_caution_id\": \"9b3e1910-9f8d-46f8-be97-6a46a2b7d9c8\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Caution by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/cautions/delete/9b3e1910-9f8d-46f8-be97-6a46a2b7d9c8",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"cautions",
+								"delete",
+								"9b3e1910-9f8d-46f8-be97-6a46a2b7d9c8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/cautions/delete/9b3e1910-9f8d-46f8-be97-6a46a2b7d9c8",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"cautions",
+										"delete",
+										"9b3e1910-9f8d-46f8-be97-6a46a2b7d9c8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "102"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 28 Dec 2025 03:48:21 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"deleted_caution_id\": \"9b3e1910-9f8d-46f8-be97-6a46a2b7d9c8\",\n    \"message\": \"Caution deleted successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update the Caution by ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"caution_name\": \"Data Privacy Alert1233\",\n    \"details\": {\n        \"notes\": \"Non mandatory stuff but new things added man\",\n        \"severity\": \"Medium\",\n        \"description\": \"Desc\"\n    },\n    \"html_content\": \"<html>\\n  <body>\\n    <table role=\\\"presentation\\\" border=\\\"0\\\" cellpadding=\\\"0\\\" cellspacing=\\\"0\\\" width=\\\"100%\\\">\\n      <tr>\\n        <td style=\\\"font-size: 12px; color: #666; text-align: center; padding: 20px;\\\">\\n          Some text that needs to be <br> Some text that needs to be <br> Some text that needs to be <br> Some text that needs to be\\n        </td>\\n      </tr>\\n    </table>\\n  </body>\\n</html>\",\n    \"text_content\": \"Some text that needs to be Some text that needs to be Some text that needs to be Some text that needs to be \"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/cautions/update/b9a18559-e9a4-47f8-beff-2e00566c6bd5",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"cautions",
+								"update",
+								"b9a18559-e9a4-47f8-beff-2e00566c6bd5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"caution_name\": \"Data Privacy Alert1233\",\n    \"details\": {\n        \"notes\": \"Non mandatory stuff but new things added man\",\n        \"severity\": \"Medium\",\n        \"description\": \"Desc\"\n    },\n    \"html_content\": \"<html>\\n  <body>\\n    <table role=\\\"presentation\\\" border=\\\"0\\\" cellpadding=\\\"0\\\" cellspacing=\\\"0\\\" width=\\\"100%\\\">\\n      <tr>\\n        <td style=\\\"font-size: 12px; color: #666; text-align: center; padding: 20px;\\\">\\n          Some text that needs to be <br> Some text that needs to be <br> Some text that needs to be <br> Some text that needs to be\\n        </td>\\n      </tr>\\n    </table>\\n  </body>\\n</html>\",\n    \"text_content\": \"Some text that needs to be Some text that needs to be Some text that needs to be Some text that needs to be \"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/cautions/update/b9a18559-e9a4-47f8-beff-2e00566c6bd5",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"cautions",
+										"update",
+										"b9a18559-e9a4-47f8-beff-2e00566c6bd5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "102"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 28 Dec 2025 03:52:18 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Caution updated successfully\",\n    \"updated_caution_id\": \"b9a18559-e9a4-47f8-beff-2e00566c6bd5\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Disclaimers",
+			"item": [
+				{
+					"name": "List all disclaimers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/disclaimers/list?page=1&page_size=10",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"disclaimers",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/disclaimers/list?page=1&page_size=10",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"disclaimers",
+										"list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "page_size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "4507"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 27 Dec 2025 13:11:03 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"disclaimer_id\": \"1b8625bb-d267-4b6d-a20b-6ca0fcf30a64\",\n        \"disclaimer_name\": \"Privacy Policy Disclaimer update\",\n        \"details\": {\n            \"address\": \"456 Business Ave, Town, State\",\n            \"description\": \"Privacy policy document\"\n        },\n        \"is_active\": false,\n        \"html_content\": \"<p>Privacy policy <em>content</em> here.</p>\",\n        \"text_content\": \"Privacy policy content here.\",\n        \"created_at\": \"2025-11-06 07:16:23.43735+00\"\n    },\n    {\n        \"disclaimer_id\": \"df81a20c-e33e-425c-9ae1-7f7bc74905fe\",\n        \"disclaimer_name\": \"ai disclaimer new\",\n        \"details\": {\n            \"address\": \"brahmpura laxmi chowk\",\n            \"description\": \"bilkul new\"\n        },\n        \"is_active\": true,\n        \"html_content\": \"<table style=\\\"width: 100%;\\\">\\n  <tr>\\n    <td align=\\\"center\\\">\\n      <p style=\\\"font-size: 12px; color: #666;\\\">This email is intended for internal use within Azura Technologies. If you have received this message in error, please inform the sender and permanently delete it. Unauthorized sharing or disclosure of internal communication may result in disciplinary or legal action.</p>\\n    </td>\\n  </tr>\\n</table>\",\n        \"text_content\": \"This email is intended for internal use within [Your Company Name]. If you have received this message in error, please inform the sender and permanently delete it. Unauthorized sharing or disclosure of internal communication may result in disciplinary or legal action.\",\n        \"created_at\": \"2025-10-16 09:20:32.219668+00\"\n    },\n    {\n        \"disclaimer_id\": \"403b89de-e82d-4e17-a000-e4b0bee1fa21\",\n        \"disclaimer_name\": \"testv3\",\n        \"details\": {\n            \"address\": \"testingv3\",\n            \"description\": \"testv3\"\n        },\n        \"is_active\": true,\n        \"html_content\": \"<p>This is our <strong>terms and conditions for testing3</strong>.</p>\",\n        \"text_content\": \"testing3\",\n        \"created_at\": \"2025-09-04 17:15:28.501223+00\"\n    },\n    {\n        \"disclaimer_id\": \"a04ce6ed-e295-4a81-b849-9750c75d06e5\",\n        \"disclaimer_name\": \"testv2\",\n        \"details\": {\n            \"address\": \"testv2\",\n            \"description\": \"testv2\"\n        },\n        \"is_active\": true,\n        \"html_content\": \"<p>This is our <strong>terms and conditions for testing</strong>.</p>\",\n        \"text_content\": \"test-v2\",\n        \"created_at\": \"2025-09-04 17:14:12.866941+00\"\n    },\n    {\n        \"disclaimer_id\": \"7d54d0c2-5efd-47f3-b92d-8f6cae7c6fab\",\n        \"disclaimer_name\": \"testv1\",\n        \"details\": {\n            \"address\": \"test-v1\",\n            \"description\": \"testv1\"\n        },\n        \"is_active\": true,\n        \"html_content\": \"<html>\\n  <body>\\n    <style> \\n     .footer {\\n        background-color: #f2f2f2;\\n        padding: 16px;\\n        text-align: center;\\n        width: 100%;\\n        clear: both;\\n        font-size: 12px;\\n      }\\n      \\n     .footer a {\\n        color: #337ab7;\\n        text-decoration: none;\\n      }\\n      \\n     .footer a:hover {\\n        color: #23527c;\\n      }\\n    </style>\\n    <div class=\\\"footer\\\">\\n      <p>This is our terms and conditions. Note not to share it with anyone unknown, if done will be prosecuted.</p>\\n      <p><a href=\\\"mailto:contact@domain.com\\\">contact@domain.com</a></p>\\n    </div>\\n  </body>\\n</html>\",\n        \"text_content\": \"This is our terms and conditions. Note not to share it with any one unknown, if done will be prosecuted.\",\n        \"created_at\": \"2025-09-04 17:12:31.404038+00\"\n    },\n    {\n        \"disclaimer_id\": \"586419e1-08fd-49aa-9c80-4d61c8c60261\",\n        \"disclaimer_name\": \"Privacy Policy Disclaimer8\",\n        \"details\": {\n            \"address\": \"Non mandatory\",\n            \"description\": \"Non mandatory\"\n        },\n        \"is_active\": true,\n        \"html_content\": \"<p>This is our <strong>terms and conditions</strong>.</p>\",\n        \"text_content\": \"Same text\",\n        \"created_at\": \"2025-08-21 10:17:09.76482+00\"\n    },\n    {\n        \"disclaimer_id\": \"a01e092e-a5f1-47e9-8c29-ba0331887963\",\n        \"disclaimer_name\": \"Privacy Policy Disclaimer7\",\n        \"details\": {\n            \"address\": \"Non mandatory\",\n            \"description\": \"Non mandatory\"\n        },\n        \"is_active\": true,\n        \"html_content\": \"<h2>correct tags</h2>\",\n        \"text_content\": \"Same text\",\n        \"created_at\": \"2025-08-21 10:17:09.358312+00\"\n    },\n    {\n        \"disclaimer_id\": \"6972b692-5def-458d-bdef-9d07dbe4b7fa\",\n        \"disclaimer_name\": \"Privacy Policy Disclaimer6\",\n        \"details\": {\n            \"address\": \"Non mandatory\",\n            \"description\": \"Non mandatory\"\n        },\n        \"is_active\": true,\n        \"html_content\": \"<h1>what if there is header></h1>\",\n        \"text_content\": \"Same text\",\n        \"created_at\": \"2025-08-21 10:17:08.951246+00\"\n    },\n    {\n        \"disclaimer_id\": \"9ef6f434-7842-40cc-a059-99351dd1e632\",\n        \"disclaimer_name\": \"Privacy Policy Disclaimer5\",\n        \"details\": {\n            \"address\": \"Non mandatory\",\n            \"description\": \"Non mandatory\"\n        },\n        \"is_active\": true,\n        \"html_content\": \"<p> there is no heading only p</p>\",\n        \"text_content\": \"Same text\",\n        \"created_at\": \"2025-08-21 10:17:08.540928+00\"\n    },\n    {\n        \"disclaimer_id\": \"951625b0-1fa0-4f31-a7d1-eac235830670\",\n        \"disclaimer_name\": \"Privacy Policy Disclaimer4\",\n        \"details\": {\n            \"address\": \"Non mandatory\",\n            \"description\": \"Non mandatory\"\n        },\n        \"is_active\": true,\n        \"html_content\": \"<h2><h1>incorrect embed</h1></h2>\",\n        \"text_content\": \"Same text\",\n        \"created_at\": \"2025-08-21 10:17:08.129344+00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Count of Disclaimer",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/disclaimers/count",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"disclaimers",
+								"count"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/disclaimers/count",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"disclaimers",
+										"count"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "81"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 27 Dec 2025 13:11:53 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"total_disclaimers\": 17\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Disclaimer by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/disclaimers/detail/1b8625bb-d267-4b6d-a20b-6ca0fcf30a64",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"disclaimers",
+								"detail",
+								"1b8625bb-d267-4b6d-a20b-6ca0fcf30a64"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/disclaimers/detail/1b8625bb-d267-4b6d-a20b-6ca0fcf30a64",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"disclaimers",
+										"detail",
+										"1b8625bb-d267-4b6d-a20b-6ca0fcf30a64"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "373"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 27 Dec 2025 13:13:08 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"disclaimer_id\": \"1b8625bb-d267-4b6d-a20b-6ca0fcf30a64\",\n    \"disclaimer_name\": \"Privacy Policy Disclaimer update\",\n    \"details\": {\n        \"address\": \"456 Business Ave, Town, State\",\n        \"description\": \"Privacy policy document\"\n    },\n    \"is_active\": false,\n    \"html_content\": \"<p>Privacy policy <em>content</em> here.</p>\",\n    \"text_content\": \"Privacy policy content here.\",\n    \"created_at\": \"2025-11-06 07:16:23.43735+00\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Departments",
+			"item": [
+				{
+					"name": "Get all departments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/departments/list?page=1&page_size=10",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"departments",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/departments/list?page=1&page_size=10",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"departments",
+										"list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "page_size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "4089"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 27 Dec 2025 13:42:09 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"department_id\": \"1bd7a5ae-3d57-4e2d-9d32-a89fcf196725\",\n        \"department_name\": \"Information Technology updated\",\n        \"details\": {\n            \"address\": \"Floor 3, IT Wing, Main Building\",\n            \"authorized_persons\": [\n                {\n                    \"email\": \"john.doe@company.com\",\n                    \"name\": \"John Doe\",\n                    \"phone\": \"+1234567890\"\n                },\n                {\n                    \"email\": \"jane.smith@company.com\",\n                    \"name\": \"Jane Smith\",\n                    \"phone\": \"+0987654321\"\n                }\n            ],\n            \"description\": \"Manages all IT infrastructure and support\",\n            \"notes\": \"Contact for technical support\"\n        },\n        \"created_at\": \"2025-11-06 07:18:00.725614+00\",\n        \"updated_at\": \"2025-11-26 11:48:49.373684+00\"\n    },\n    {\n        \"department_id\": \"d7fa52aa-ab12-4030-9460-1a982c0df6e7\",\n        \"department_name\": \"HR\",\n        \"details\": {\n            \"address\": \"HResource\",\n            \"authorized_persons\": [\n                {\n                    \"email\": \"\",\n                    \"name\": \"\",\n                    \"phone\": \"\"\n                }\n            ],\n            \"description\": \"HR dept.\",\n            \"notes\": \"HR dept.\"\n        },\n        \"created_at\": \"2025-08-22 11:32:00.732115+00\",\n        \"updated_at\": \"2025-11-06 06:41:01.488901+00\"\n    },\n    {\n        \"department_id\": \"ae98e188-0bee-435a-ad3f-e8f91c7f6a86\",\n        \"department_name\": \"admin\",\n        \"details\": {\n            \"address\": \"admin\",\n            \"authorized_persons\": [\n                {\n                    \"email\": \"\",\n                    \"name\": \"\",\n                    \"phone\": \"\"\n                }\n            ],\n            \"description\": \"admin department\",\n            \"notes\": \"\"\n        },\n        \"created_at\": \"2025-09-04 17:56:42.134455+00\",\n        \"updated_at\": \"2025-09-04 17:56:42.134455+00\"\n    },\n    {\n        \"department_id\": \"d67740b8-1188-4b4f-90dc-035d31bdfee7\",\n        \"department_name\": \"stock\",\n        \"details\": {\n            \"address\": \"stock\",\n            \"authorized_persons\": [\n                {\n                    \"email\": \"\",\n                    \"name\": \"\",\n                    \"phone\": \"\"\n                }\n            ],\n            \"description\": \"stock dept.\",\n            \"notes\": \"only stock dept.\"\n        },\n        \"created_at\": \"2025-08-22 11:31:28.8873+00\",\n        \"updated_at\": \"2025-08-22 11:31:28.8873+00\"\n    },\n    {\n        \"department_id\": \"705f05a1-de9d-47e6-aee1-4a2c7167c6c6\",\n        \"department_name\": \"accounts\",\n        \"details\": {\n            \"address\": \"accounts\",\n            \"authorized_persons\": [\n                {\n                    \"email\": \"\",\n                    \"name\": \"\",\n                    \"phone\": \"\"\n                }\n            ],\n            \"description\": \"accounts department\",\n            \"notes\": \"\"\n        },\n        \"created_at\": \"2025-08-22 10:58:32.295537+00\",\n        \"updated_at\": \"2025-08-22 10:58:32.295537+00\"\n    },\n    {\n        \"department_id\": \"08a98e66-54af-4e5c-8229-c2c91d45cc7f\",\n        \"department_name\": \"Craig Leblanc\",\n        \"details\": {\n            \"address\": \"Est delectus qui al\",\n            \"authorized_persons\": [\n                {\n                    \"email\": \"tevyxivoxi@mailinator.com\",\n                    \"name\": \"Ursula Moss\",\n                    \"phone\": \"+1 (801) 108-6189\"\n                },\n                {\n                    \"email\": \"fnsjn@kdsjnvdj.com\",\n                    \"name\": \"mdscnsncv\",\n                    \"phone\": \"wfewff\"\n                },\n                {\n                    \"email\": \"wdsadasd@svdsd\",\n                    \"name\": \"wefwf\",\n                    \"phone\": \"fer@@#!\"\n                },\n                {\n                    \"email\": \"\",\n                    \"name\": \"\",\n                    \"phone\": \"\"\n                }\n            ],\n            \"description\": \"Incidunt eu eu exce\",\n            \"notes\": \"Qui culpa vitae nihi\"\n        },\n        \"created_at\": \"2025-08-14 05:08:24.924409+00\",\n        \"updated_at\": \"2025-08-21 08:14:40.705316+00\"\n    },\n    {\n        \"department_id\": \"07aa0e53-ccba-4f02-9b6a-87bec522951e\",\n        \"department_name\": \"Human Resources22\",\n        \"details\": {\n            \"address\": \"Floor 2, HR Department, Main Building\",\n            \"authorized_persons\": [\n                {\n                    \"email\": \"bob.wilson@company.com\",\n                    \"name\": \"Bob Wilson\",\n                    \"phone\": \"+1122334455\"\n                }\n            ],\n            \"description\": \"Handles employee relations and policies22\",\n            \"notes\": \"Available for employee queries\"\n        },\n        \"created_at\": \"2025-08-13 04:41:11.949211+00\",\n        \"updated_at\": \"2025-08-13 04:41:11.949211+00\"\n    },\n    {\n        \"department_id\": \"1bbeab9f-8695-4cdb-b2fb-e87f4c2e708d\",\n        \"department_name\": \"Information Technology1\",\n        \"details\": {\n            \"address\": \"Floor 3, IT Wing, Main Building\",\n            \"authorized_persons\": [\n                {\n                    \"email\": \"john.doe@company.com\",\n                    \"name\": \"John Doe\",\n                    \"phone\": \"+1234567890\"\n                },\n                {\n                    \"email\": \"jane.smith@company.com\",\n                    \"name\": \"Jane Smith\",\n                    \"phone\": \"+0987654321\"\n                }\n            ],\n            \"description\": \"Manages all IT infrastructure and support2\",\n            \"notes\": \"Contact for technical support\"\n        },\n        \"created_at\": \"2025-08-13 04:41:11.304328+00\",\n        \"updated_at\": \"2025-08-13 04:41:11.304328+00\"\n    },\n    {\n        \"department_id\": \"70753483-7937-4259-be18-cd1a1ee741ac\",\n        \"department_name\": \"Nolan Thornton\",\n        \"details\": {\n            \"address\": \"Commodi maiores ipsa\",\n            \"authorized_persons\": [\n                {\n                    \"email\": \"gevoqycex@mailinator.com\",\n                    \"name\": \"Regan Wood\",\n                    \"phone\": \"+1 (557) 643-7653\"\n                }\n            ],\n            \"description\": \"Expedita incididunt \",\n            \"notes\": \"Animi fuga Sed lib\"\n        },\n        \"created_at\": \"2025-07-31 05:36:00.376466+00\",\n        \"updated_at\": \"2025-07-31 05:36:00.376466+00\"\n    },\n    {\n        \"department_id\": \"bdf092be-4dbd-45fc-9238-bbc27367ec23\",\n        \"department_name\": \"Janna Myers\",\n        \"details\": {\n            \"address\": \"Adipisci officiis om\",\n            \"authorized_persons\": [\n                {\n                    \"email\": \"hutanowot@mailinator.com\",\n                    \"name\": \"Graiden Glenn\",\n                    \"phone\": \"+1 (481) 666-3911\"\n                }\n            ],\n            \"description\": \"Qui eos ut eveniet\",\n            \"notes\": \"Deserunt accusantium\"\n        },\n        \"created_at\": \"2025-07-31 04:56:47.995813+00\",\n        \"updated_at\": \"2025-07-31 04:56:47.995813+00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Count all Departments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/departments/count",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"departments",
+								"count"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/departments/count",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"departments",
+										"count"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "81"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 27 Dec 2025 13:42:49 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"total_departments\": 16\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Single Department Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/departments/detail/1bd7a5ae-3d57-4e2d-9d32-a89fcf196725",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"departments",
+								"detail",
+								"1bd7a5ae-3d57-4e2d-9d32-a89fcf196725"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/departments/detail/1bd7a5ae-3d57-4e2d-9d32-a89fcf196725",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"departments",
+										"detail",
+										"1bd7a5ae-3d57-4e2d-9d32-a89fcf196725"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "524"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 27 Dec 2025 13:43:41 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"department_id\": \"1bd7a5ae-3d57-4e2d-9d32-a89fcf196725\",\n    \"department_name\": \"Information Technology updated\",\n    \"details\": {\n        \"address\": \"Floor 3, IT Wing, Main Building\",\n        \"authorized_persons\": [\n            {\n                \"email\": \"john.doe@company.com\",\n                \"name\": \"John Doe\",\n                \"phone\": \"+1234567890\"\n            },\n            {\n                \"email\": \"jane.smith@company.com\",\n                \"name\": \"Jane Smith\",\n                \"phone\": \"+0987654321\"\n            }\n        ],\n        \"description\": \"Manages all IT infrastructure and support\",\n        \"notes\": \"Contact for technical support\"\n    },\n    \"created_at\": \"2025-11-06 07:18:00.725614+00\",\n    \"updated_at\": \"2025-11-26 11:48:49.373684+00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new Department",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"department_name\": \"New admin NN nn\",\n  \"details\": {\n    \"notes\": \"\",\n    \"address\": \"admin\",\n    \"description\": \"admin department\",\n    \"authorized_persons\": [\n      {\n        \"name\": \"tst\",\n        \"email\": \"sse@sds\",\n        \"phone\": \"+91123113213\"\n      },\n      {\n        \"name\": \"\",\n        \"email\": \"\",\n        \"phone\": \"\"\n      }\n    ]\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/departments/create",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"departments",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"department_name\": \"New admin NN nn\",\n  \"details\": {\n    \"notes\": \"\",\n    \"address\": \"admin\",\n    \"description\": \"admin department\",\n    \"authorized_persons\": [\n      {\n        \"name\": \"tst\",\n        \"email\": \"sse@sds\",\n        \"phone\": \"+91123113213\"\n      },\n      {\n        \"name\": \"\",\n        \"email\": \"\",\n        \"phone\": \"\"\n      }\n    ]\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/departments/create",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"departments",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "104"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 27 Dec 2025 14:11:11 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Department created successfully\",\n    \"new_department_id\": \"ff9e811d-ba57-4487-80d2-b5a8db808794\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete the Department",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/departments/delete/1bd7a5ae-3d57-4e2d-9d32-a89fcf196725",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"departments",
+								"delete",
+								"1bd7a5ae-3d57-4e2d-9d32-a89fcf196725"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/departments/delete/1bd7a5ae-3d57-4e2d-9d32-a89fcf196725",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"departments",
+										"delete",
+										"1bd7a5ae-3d57-4e2d-9d32-a89fcf196725"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "108"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 27 Dec 2025 14:23:17 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"deleted_department_id\": \"1bd7a5ae-3d57-4e2d-9d32-a89fcf196725\",\n    \"message\": \"Department deleted successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Department by ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"department_name\": \"New admin abcd\",\n  \"details\": {\n    \"notes\": \"New notes\",\n    \"address\": \"admin\",\n    \"description\": \"admin department\",\n    \"authorized_persons\": [\n      {\n        \"name\": \"tst\",\n        \"email\": \"sse@sds\",\n        \"phone\": \"+91123113213\"\n      },\n      {\n        \"name\": \"\",\n        \"email\": \"\",\n        \"phone\": \"\"\n      }\n    ]\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/departments/update/ff9e811d-ba57-4487-80d2-b5a8db808794",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"departments",
+								"update",
+								"ff9e811d-ba57-4487-80d2-b5a8db808794"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"department_name\": \"New admin abcd\",\n  \"details\": {\n    \"notes\": \"New notes\",\n    \"address\": \"admin\",\n    \"description\": \"admin department\",\n    \"authorized_persons\": [\n      {\n        \"name\": \"tst\",\n        \"email\": \"sse@sds\",\n        \"phone\": \"+91123113213\"\n      },\n      {\n        \"name\": \"\",\n        \"email\": \"\",\n        \"phone\": \"\"\n      }\n    ]\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/departments/update/ff9e811d-ba57-4487-80d2-b5a8db808794",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"departments",
+										"update",
+										"ff9e811d-ba57-4487-80d2-b5a8db808794"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "108"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 27 Dec 2025 14:30:51 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Department updated successfully\",\n    \"updated_department_id\": \"ff9e811d-ba57-4487-80d2-b5a8db808794\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": ""
+		},
+		{
+			"key": "BASE_URL",
+			"value": "",
+			"disabled": true
+		}
+	]
+}
