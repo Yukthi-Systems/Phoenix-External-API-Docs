@@ -39,7 +39,7 @@ export default function Home() {
               Read the Docs
               <span className={styles.arrow}>→</span>
             </a>
-            <a href="https://github.com/Yukthi-Systems/V3-External-Api-Docs" className={styles.secondaryBtn} target="_blank">
+            <a href="https://github.com/Yukthi-Systems/V3-External-API-Docs" className={styles.secondaryBtn} target="_blank">
               View on GitHub
             </a>
           </div>

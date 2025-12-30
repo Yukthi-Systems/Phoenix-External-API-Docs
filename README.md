@@ -84,7 +84,7 @@ This snapshots current docs as version 1.0.0.
 
 ## Project Links
 
-- **Repository**: [Yukthi-Systems/V3-External-Api-Docs](https://github.com/Yukthi-Systems/V3-External-Api-Docs)
+- **Repository**: [Yukthi-Systems/V3-External-API-Docs](https://github.com/Yukthi-Systems/V3-External-API-Docs)
 - **Live Docs**: `https://docs.yourdomain.com`
 
 ## Contributing
