@@ -1,11 +1,8 @@
 services:
   v3-external-api-docs:
     image: rjyspl/v3-external-api-docs:latest
-    container_name: v3-external-api-docs
 
-    # Load environment variables from the .env file
-    env_file:
-      - .env
+    container_name: v3-external-api-docs
 
     ports:
       - '127.0.0.1:8682:3000'

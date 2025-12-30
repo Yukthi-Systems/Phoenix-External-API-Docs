@@ -3,12 +3,12 @@ name: Docker Build and Deploy
 on:
   push:
     branches:
-      - "master"
+      - "main"
     tags:
       - "*"
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   build:
