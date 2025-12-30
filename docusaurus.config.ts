@@ -11,7 +11,7 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://yukthi-systems.github.io',
+  url: 'https://v3-api.docs.yukthi.net',
   baseUrl: '/',
 
   organizationName: 'Yukthi-Systems',

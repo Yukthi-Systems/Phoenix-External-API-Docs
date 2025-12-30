@@ -30,7 +30,7 @@ RUN npm install -g serve
 RUN apk add --no-cache wget
 
 # Copy the built application files from the builder stage
-COPY --from=builder /app/dist /app/dist
+COPY --from=builder /app/build /app/build
 
 # Expose port 3000 for the web server
 EXPOSE 3000
@@ -40,4 +40,4 @@ HEALTHCHECK --interval=30s --timeout=3s \
   CMD wget --quiet --tries=1 --spider http://localhost:3000 || exit 1
 
 # Start the application using 'serve'
-CMD ["serve", "-s", "dist", "-l", "3000"]
+CMD ["serve", "-s", "build", "-l", "3000"]
