@@ -231,7 +231,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "content-length",
@@ -800,7 +800,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "content-length",
@@ -873,7 +873,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "content-length",
@@ -964,7 +964,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": null,
 							"header": [
 								{
 									"key": "content-length",
@@ -1225,6 +1225,259 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"disclaimer_id\": \"1b8625bb-d267-4b6d-a20b-6ca0fcf30a64\",\n    \"disclaimer_name\": \"Privacy Policy Disclaimer update\",\n    \"details\": {\n        \"address\": \"456 Business Ave, Town, State\",\n        \"description\": \"Privacy policy document\"\n    },\n    \"is_active\": false,\n    \"html_content\": \"<p>Privacy policy <em>content</em> here.</p>\",\n    \"text_content\": \"Privacy policy content here.\",\n    \"created_at\": \"2025-11-06 07:16:23.43735+00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new Disclaimer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"disclaimer_name\": \"Test Name by API\",\n    \"details\": {\n        \"description\": \"Some API Test by NIK\"\n    },\n    \"html_content\": \"<>Some HTML</>\",\n    \"text_content\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/disclaimers/create",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"disclaimers",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"disclaimer_name\": \"Test Name by API\",\n    \"details\": {\n        \"description\": \"Some API Test by NIK\"\n    },\n    \"html_content\": \"<>Some HTML</>\",\n    \"text_content\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/disclaimers/create",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"disclaimers",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "104"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 03:27:48 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Department created successfully\",\n    \"new_department_id\": \"7b88e83d-a790-496d-a8a8-10515f961cab\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Disclaimer",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"disclaimer_name\": \"Test Name by API\",\n    \"details\": {\n        \"description\": \"Some API Test by NIK - Updated version\"\n    },\n    \"html_content\": \"<>Some HTML</>\",\n    \"text_content\": \"Some new content\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/disclaimers/update/7b88e83d-a790-496d-a8a8-10515f961cab",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"disclaimers",
+								"update",
+								"7b88e83d-a790-496d-a8a8-10515f961cab"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"disclaimer_name\": \"Test Name by API\",\n    \"details\": {\n        \"description\": \"Some API Test by NIK - Updated version\"\n    },\n    \"html_content\": \"<>Some HTML</>\",\n    \"text_content\": \"Some new content\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/disclaimers/update/7b88e83d-a790-496d-a8a8-10515f961cab",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"disclaimers",
+										"update",
+										"7b88e83d-a790-496d-a8a8-10515f961cab"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "108"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 03:38:58 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Disclaimer updated successfully\",\n    \"updated_disclaimer_id\": \"7b88e83d-a790-496d-a8a8-10515f961cab\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Disclaimer",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/disclaimers/delete/7b88e83d-a790-496d-a8a8-10515f961cab",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"disclaimers",
+								"delete",
+								"7b88e83d-a790-496d-a8a8-10515f961cab"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/disclaimers/delete/7b88e83d-a790-496d-a8a8-10515f961cab",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"disclaimers",
+										"delete",
+										"7b88e83d-a790-496d-a8a8-10515f961cab"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "108"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 03:39:55 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"deleted_disclaimer_id\": \"7b88e83d-a790-496d-a8a8-10515f961cab\",\n    \"message\": \"Disclaimer deleted successfully\"\n}"
 						}
 					]
 				}
@@ -1722,8 +1975,2981 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Filter Policy",
+			"item": [
+				{
+					"name": "List all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/filter/list/devtest11.yukthi.net?page=1&page_size=10",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"filter",
+								"list",
+								"devtest11.yukthi.net"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/filter/list/devtest11.yukthi.net?page=1&page_size=10",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"filter",
+										"list",
+										"devtest11.yukthi.net"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "page_size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "508"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 04:17:44 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"policy_id\": \"1bdd081d-7252-46b0-b66b-1c76efef041e\",\n        \"policy_name\": \"test\",\n        \"is_white_list\": true,\n        \"is_emails\": true,\n        \"entries\": [],\n        \"is_active\": true,\n        \"created_at\": \"2025-12-31 11:43:35.240172+00\",\n        \"updated_at\": \"2025-12-31 11:44:04.674172+00\"\n    },\n    {\n        \"policy_id\": \"945507b2-9f4c-4a6e-bc25-3c84100711f7\",\n        \"policy_name\": \"Allow only internalmails\",\n        \"is_white_list\": false,\n        \"is_emails\": false,\n        \"entries\": [\n            \"gmail.com\",\n            \"abc.com\"\n        ],\n        \"is_active\": true,\n        \"created_at\": \"2025-11-06 07:56:23.406425+00\",\n        \"updated_at\": \"2025-12-20 06:44:22.894022+00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Count",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/filter/count/devtest11.yukthi.net",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"filter",
+								"count",
+								"devtest11.yukthi.net"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/filter/count/devtest11.yukthi.net",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"filter",
+										"count",
+										"devtest11.yukthi.net"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "121"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 04:21:35 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"total_filter_policies\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch One",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/filter/detail/devtest11.yukthi.net/945507b2-9f4c-4a6e-bc25-3c84100711f7",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"filter",
+								"detail",
+								"devtest11.yukthi.net",
+								"945507b2-9f4c-4a6e-bc25-3c84100711f7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/filter/detail/devtest11.yukthi.net/945507b2-9f4c-4a6e-bc25-3c84100711f7",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"filter",
+										"detail",
+										"devtest11.yukthi.net",
+										"945507b2-9f4c-4a6e-bc25-3c84100711f7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "274"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 04:37:14 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"policy_id\": \"945507b2-9f4c-4a6e-bc25-3c84100711f7\",\n    \"policy_name\": \"Allow only internalmails\",\n    \"is_white_list\": false,\n    \"is_emails\": false,\n    \"entries\": [\n        \"gmail.com\",\n        \"abc.com\"\n    ],\n    \"is_active\": true,\n    \"created_at\": \"2025-11-06 07:56:23.406425+00\",\n    \"updated_at\": \"2025-12-20 06:44:22.894022+00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/filter/delete/devtest11.yukthi.net/cc2acc5a-7991-403b-8dfa-bf93f2ded00b",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"filter",
+								"delete",
+								"devtest11.yukthi.net",
+								"cc2acc5a-7991-403b-8dfa-bf93f2ded00b"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/filter/delete/devtest11.yukthi.net/945507b2-9f4c-4a6e-bc25-3c84100711f7",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"filter",
+										"delete",
+										"devtest11.yukthi.net",
+										"945507b2-9f4c-4a6e-bc25-3c84100711f7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "193"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 04:49:19 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"message\": \"Filter Policy deleted successfully\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"policy_id\": \"945507b2-9f4c-4a6e-bc25-3c84100711f7\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"policy_name\": \"Allow only internalmails\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"is_white_list\": false,\n    \"is_emails\": false,\n    \"entries\": [\n        \"gmail.com\",\n        \"abc.com\"\n    ],\n    \"is_active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/policy/filter/create",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"filter",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"policy_name\": \"Allow only internalmails\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"is_white_list\": false,\n    \"is_emails\": false,\n    \"entries\": [\n        \"gmail.com\",\n        \"abc.com\"\n    ],\n    \"is_active\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/policy/filter/create",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"filter",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "193"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 07:19:35 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"message\": \"Filter Policy created successfully\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"policy_id\": \"cc2acc5a-7991-403b-8dfa-bf93f2ded00b\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Replace policy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"policy_name\": \"Allow only internalmails\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"is_white_list\": false,\n    \"is_emails\": false,\n    \"entries\": [\n        \"gmail.com\",\n        \"abc.com\",\n        \"cats.com\"\n    ],\n    \"is_active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/policy/filter/update/29c0f43b-fa79-4f10-a0c0-00474f570122",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"filter",
+								"update",
+								"29c0f43b-fa79-4f10-a0c0-00474f570122"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"policy_name\": \"Allow only internalmails\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"is_white_list\": false,\n    \"is_emails\": false,\n    \"entries\": [\n        \"gmail.com\",\n        \"abc.com\",\n        \"cats.com\"\n    ],\n    \"is_active\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/policy/filter/update/29c0f43b-fa79-4f10-a0c0-00474f570122",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"filter",
+										"update",
+										"29c0f43b-fa79-4f10-a0c0-00474f570122"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "193"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 07:25:30 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"message\": \"Filter Policy updated successfully\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"policy_id\": \"29c0f43b-fa79-4f10-a0c0-00474f570122\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "General Policy",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/general/list/devtest11.yukthi.net?page=1&page_size=10",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"general",
+								"list",
+								"devtest11.yukthi.net"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/general/list/devtest11.yukthi.net?page=1&page_size=10",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"general",
+										"list",
+										"devtest11.yukthi.net"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "page_size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "2109"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 07:52:11 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"policy_id\": \"377dfad9-79dc-4228-9c34-f89a3fd1f7b9\",\n        \"policy_name\": \"allowing for 2 MB incoming\",\n        \"policy_description\": \"\",\n        \"block_all_incoming_emails\": false,\n        \"block_all_outgoing_emails\": false,\n        \"block_all_incoming_domains\": true,\n        \"block_all_outgoing_domains\": false,\n        \"incoming_exception_domains\": [],\n        \"outgoing_exception_domains\": [],\n        \"incoming_exception_emails\": [],\n        \"outgoing_exception_emails\": [],\n        \"outgoing_size_limit_mb\": \"2.00\",\n        \"is_active\": true,\n        \"created_at\": \"2025-12-31 06:22:50.043605+00\",\n        \"updated_at\": \"2025-12-31 06:22:50.043605+00\"\n    },\n    {\n        \"policy_id\": \"4df7b3f3-5d19-4e5d-88a3-4e566a62734d\",\n        \"policy_name\": \"test create\",\n        \"policy_description\": \"\",\n        \"block_all_incoming_emails\": false,\n        \"block_all_outgoing_emails\": false,\n        \"block_all_incoming_domains\": true,\n        \"block_all_outgoing_domains\": true,\n        \"incoming_exception_domains\": [],\n        \"outgoing_exception_domains\": [],\n        \"incoming_exception_emails\": [],\n        \"outgoing_exception_emails\": [],\n        \"outgoing_size_limit_mb\": \"0.00\",\n        \"is_active\": true,\n        \"created_at\": \"2025-12-30 11:30:36.71704+00\",\n        \"updated_at\": \"2025-12-31 06:20:55.122433+00\"\n    },\n    {\n        \"policy_id\": \"94f94dca-2ba9-489a-b0d6-1abff8588e91\",\n        \"policy_name\": \"General Policy\",\n        \"policy_description\": \"\",\n        \"block_all_incoming_emails\": false,\n        \"block_all_outgoing_emails\": false,\n        \"block_all_incoming_domains\": false,\n        \"block_all_outgoing_domains\": false,\n        \"incoming_exception_domains\": [\n            \"abc.org\"\n        ],\n        \"outgoing_exception_domains\": [\n            \"zyx.com\",\n            \"def.com\"\n        ],\n        \"incoming_exception_emails\": [],\n        \"outgoing_exception_emails\": [],\n        \"outgoing_size_limit_mb\": \"8.00\",\n        \"is_active\": true,\n        \"created_at\": \"2025-10-14 11:16:05.924702+00\",\n        \"updated_at\": \"2025-12-29 07:38:26.317998+00\"\n    },\n    {\n        \"policy_id\": \"84705466-3406-4157-b911-8ff45cc32df6\",\n        \"policy_name\": \"blocking externally  test\",\n        \"policy_description\": \"\",\n        \"block_all_incoming_emails\": true,\n        \"block_all_outgoing_emails\": true,\n        \"block_all_incoming_domains\": false,\n        \"block_all_outgoing_domains\": false,\n        \"incoming_exception_domains\": [\n            \"gmail.com\"\n        ],\n        \"outgoing_exception_domains\": [\n            \"gmail.com\"\n        ],\n        \"incoming_exception_emails\": [],\n        \"outgoing_exception_emails\": [],\n        \"outgoing_size_limit_mb\": \"1.00\",\n        \"is_active\": true,\n        \"created_at\": \"2025-11-14 05:53:17.948854+00\",\n        \"updated_at\": \"2025-12-29 07:37:38.598153+00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Count",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/general/count/devtest11.yukthi.net",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"general",
+								"count",
+								"devtest11.yukthi.net"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/general/count/devtest11.yukthi.net",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"general",
+										"count",
+										"devtest11.yukthi.net"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "122"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 07:55:16 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"total_general_policies\": 4\n}"
+						}
+					]
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/general/detail/devtest11.yukthi.net/4df7b3f3-5d19-4e5d-88a3-4e566a62734d",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"general",
+								"detail",
+								"devtest11.yukthi.net",
+								"4df7b3f3-5d19-4e5d-88a3-4e566a62734d"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/general/detail/devtest11.yukthi.net/4df7b3f3-5d19-4e5d-88a3-4e566a62734d",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"general",
+										"detail",
+										"devtest11.yukthi.net",
+										"4df7b3f3-5d19-4e5d-88a3-4e566a62734d"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "504"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 08:03:03 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"policy_id\": \"4df7b3f3-5d19-4e5d-88a3-4e566a62734d\",\n    \"policy_name\": \"test create\",\n    \"policy_description\": \"\",\n    \"block_all_incoming_emails\": false,\n    \"block_all_outgoing_emails\": false,\n    \"block_all_incoming_domains\": true,\n    \"block_all_outgoing_domains\": true,\n    \"incoming_exception_domains\": [],\n    \"outgoing_exception_domains\": [],\n    \"incoming_exception_emails\": [],\n    \"outgoing_exception_emails\": [],\n    \"outgoing_size_limit_mb\": \"0.00\",\n    \"is_active\": true,\n    \"created_at\": \"2025-12-30 11:30:36.71704+00\",\n    \"updated_at\": \"2025-12-31 06:20:55.122433+00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"policy_name\": \"Corporate Email Policy\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"policy_description\": \"Policy for corporate email usage\",\n    \"block_all_incoming_emails\": false,\n    \"block_all_outgoing_emails\": false,\n    \"block_all_incoming_domains\": false,\n    \"block_all_outgoing_domains\": false,\n    \"incoming_exception_domains\": [\"trusted.com\", \"partner.com\"],\n    \"outgoing_exception_domains\": [\"trusted.com\", \"partner.com\"],\n    \"incoming_exception_emails\": [\"test@example.com\", \"test2@example.com\"],\n    \"outgoing_exception_emails\": [],\n    \"outgoing_size_limit_mb\": 25.00,\n    \"is_active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/policy/general/create",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"general",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"policy_name\": \"Corporate Email Policy\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"policy_description\": \"Policy for corporate email usage\",\n    \"block_all_incoming_emails\": false,\n    \"block_all_outgoing_emails\": false,\n    \"block_all_incoming_domains\": false,\n    \"block_all_outgoing_domains\": false,\n    \"incoming_exception_domains\": [\"trusted.com\", \"partner.com\"],\n    \"outgoing_exception_domains\": [\"trusted.com\", \"partner.com\"],\n    \"incoming_exception_emails\": [\"test@example.com\", \"test2@example.com\"],\n    \"outgoing_exception_emails\": [],\n    \"outgoing_size_limit_mb\": 25.00,\n    \"is_active\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/policy/general/create",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"general",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "194"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 08:30:03 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"message\": \"General Policy created successfully\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"policy_id\": \"6ccb6e77-2d25-4c08-9015-bf40f6e67135\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete it",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/general/delete/devtest11.yukthi.net/6ccb6e77-2d25-4c08-9015-bf40f6e67135",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"general",
+								"delete",
+								"devtest11.yukthi.net",
+								"6ccb6e77-2d25-4c08-9015-bf40f6e67135"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/general/delete/devtest11.yukthi.net/6ccb6e77-2d25-4c08-9015-bf40f6e67135",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"general",
+										"delete",
+										"devtest11.yukthi.net",
+										"6ccb6e77-2d25-4c08-9015-bf40f6e67135"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "194"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 08:33:13 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"message\": \"General Policy deleted successfully\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"policy_id\": \"6ccb6e77-2d25-4c08-9015-bf40f6e67135\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"policy_name\": \"Corporate Email Policy\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"policy_description\": \"Policy for corporate email usage\",\n    \"block_all_incoming_emails\": false,\n    \"block_all_outgoing_emails\": false,\n    \"block_all_incoming_domains\": false,\n    \"block_all_outgoing_domains\": false,\n    \"incoming_exception_domains\": [\"trusted.com\", \"partner.com\"],\n    \"outgoing_exception_domains\": [\"trusted.com\", \"partner.com\"],\n    \"incoming_exception_emails\": [\"test@example.com\", \"test2@example.com\"],\n    \"outgoing_exception_emails\": [],\n    \"outgoing_size_limit_mb\": 25.86,\n    \"is_active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/policy/general/update/b6b3b4e3-a9ff-4e73-b291-3450af719522",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"general",
+								"update",
+								"b6b3b4e3-a9ff-4e73-b291-3450af719522"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"policy_name\": \"Corporate Email Policy\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"policy_description\": \"Policy for corporate email usage\",\n    \"block_all_incoming_emails\": false,\n    \"block_all_outgoing_emails\": false,\n    \"block_all_incoming_domains\": false,\n    \"block_all_outgoing_domains\": false,\n    \"incoming_exception_domains\": [\"trusted.com\", \"partner.com\"],\n    \"outgoing_exception_domains\": [\"trusted.com\", \"partner.com\"],\n    \"incoming_exception_emails\": [\"test@example.com\", \"test2@example.com\"],\n    \"outgoing_exception_emails\": [],\n    \"outgoing_size_limit_mb\": 25.86,\n    \"is_active\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/policy/general/update/b6b3b4e3-a9ff-4e73-b291-3450af719522",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"general",
+										"update",
+										"b6b3b4e3-a9ff-4e73-b291-3450af719522"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "194"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 08:37:22 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"message\": \"General Policy updated successfully\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"policy_id\": \"b6b3b4e3-a9ff-4e73-b291-3450af719522\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Attachment Policy",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/attachment/list/devtest11.yukthi.net?page=1&page_size=10",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"attachment",
+								"list",
+								"devtest11.yukthi.net"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/attachment/list/devtest11.yukthi.net?page=1&page_size=10",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"attachment",
+										"list",
+										"devtest11.yukthi.net"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "page_size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "3181"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 08:48:29 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"policy_id\": \"c70ec560-26a7-473b-bf0c-330ee9aee3a6\",\n        \"policy_name\": \"bfbfbf\",\n        \"policy_description\": \"ffgfgfg\",\n        \"blocked_file_types\": [\n            \"exe\",\n            \"bat\",\n            \"cmd\",\n            \"com\",\n            \"pif\",\n            \"scr\",\n            \"vbs\",\n            \"js\",\n            \"jse\",\n            \"jar\",\n            \"msi\",\n            \"app\",\n            \"deb\",\n            \"dmg\",\n            \"vb\",\n            \"vbe\",\n            \"wsc\",\n            \"wsf\",\n            \"wsh\",\n            \"hta\",\n            \"cpl\",\n            \"msc\",\n            \"reg\",\n            \"lnk\",\n            \"inf\",\n            \"sys\",\n            \"dll\",\n            \"mim\",\n            \"b64\",\n            \"bhx\",\n            \"hqx\",\n            \"xxe\",\n            \"uu\",\n            \"uue\",\n            \"ade\",\n            \"adp\",\n            \"bas\",\n            \"chm\",\n            \"crt\",\n            \"hlp\",\n            \"ins\",\n            \"isp\",\n            \"mda\",\n            \"mdb\",\n            \"mde\",\n            \"mdw\",\n            \"mdt\",\n            \"mdz\",\n            \"ops\",\n            \"pcd\",\n            \"prg\",\n            \"sct\",\n            \"shb\",\n            \"shs\",\n            \"url\",\n            \"vbscript\",\n            \"ace\",\n            \"iso\",\n            \"lzh\",\n            \"cab\",\n            \"mmp\",\n            \"shtml\",\n            \"fxp\",\n            \"grp\",\n            \"msp\",\n            \"mst\",\n            \"rll\",\n            \"part\",\n            \"docm\",\n            \"wmf\",\n            \"lha\",\n            \"jpeg\",\n            \"jpg\",\n            \"csv\",\n            \"png\",\n            \"sss\",\n            \"pdf\",\n            \"htm\"\n        ],\n        \"allowed_file_types\": [],\n        \"max_attachment_size_mb\": \"25.00\",\n        \"is_active\": true,\n        \"created_at\": \"2026-01-06 09:55:38.25403+00\",\n        \"updated_at\": \"2026-01-06 09:55:38.25403+00\"\n    },\n    {\n        \"policy_id\": \"065304d0-4af8-4a86-a386-cbdebc0aaba7\",\n        \"policy_name\": \"adadddd\",\n        \"policy_description\": \"adadada\",\n        \"blocked_file_types\": [\n            \"exe\",\n            \"bat\",\n            \"cmd\",\n            \"com\",\n            \"pif\",\n            \"scr\",\n            \"vbs\",\n            \"js\",\n            \"jse\",\n            \"jar\",\n            \"msi\",\n            \"app\",\n            \"deb\",\n            \"dmg\",\n            \"vb\",\n            \"vbe\",\n            \"wsc\",\n            \"wsf\",\n            \"wsh\",\n            \"hta\",\n            \"cpl\",\n            \"msc\",\n            \"reg\",\n            \"lnk\",\n            \"inf\",\n            \"sys\",\n            \"dll\",\n            \"mim\",\n            \"b64\",\n            \"bhx\",\n            \"hqx\",\n            \"xxe\",\n            \"uu\",\n            \"uue\",\n            \"ade\",\n            \"adp\",\n            \"bas\",\n            \"chm\",\n            \"crt\",\n            \"hlp\",\n            \"ins\",\n            \"isp\",\n            \"mda\",\n            \"mdb\",\n            \"mde\",\n            \"mdw\",\n            \"mdt\",\n            \"mdz\",\n            \"ops\",\n            \"pcd\",\n            \"prg\",\n            \"sct\",\n            \"shb\",\n            \"shs\",\n            \"url\",\n            \"vbscript\",\n            \"ace\",\n            \"iso\",\n            \"lzh\",\n            \"cab\",\n            \"mmp\",\n            \"shtml\",\n            \"fxp\",\n            \"grp\",\n            \"msp\",\n            \"mst\",\n            \"rll\",\n            \"part\",\n            \"docm\",\n            \"wmf\",\n            \"lha\",\n            \"jpeg\",\n            \"jpg\",\n            \"csv\",\n            \"png\",\n            \"sss\",\n            \"pdf\",\n            \"htm\"\n        ],\n        \"allowed_file_types\": [],\n        \"max_attachment_size_mb\": \"25.00\",\n        \"is_active\": true,\n        \"created_at\": \"2026-01-06 09:52:06.204979+00\",\n        \"updated_at\": \"2026-01-06 09:52:06.204979+00\"\n    },\n    {\n        \"policy_id\": \"c0b8a990-c3f2-40f9-acde-5db4a5900ef1\",\n        \"policy_name\": \"Restricted Attachment Policy\",\n        \"policy_description\": \"Blocks all executable and potentially dangerous files\",\n        \"blocked_file_types\": [\n            \"exe\",\n            \"bat\",\n            \"cmd\",\n            \"com\",\n            \"pif\",\n            \"scr\",\n            \"vbs\",\n            \"js\",\n            \"jse\",\n            \"jar\",\n            \"msi\",\n            \"app\",\n            \"deb\",\n            \"dmg\",\n            \"vb\",\n            \"vbe\",\n            \"wsc\",\n            \"wsf\",\n            \"wsh\",\n            \"hta\",\n            \"cpl\",\n            \"msc\",\n            \"reg\",\n            \"lnk\",\n            \"inf\",\n            \"sys\",\n            \"dll\",\n            \"mim\",\n            \"b64\",\n            \"bhx\",\n            \"hqx\",\n            \"xxe\",\n            \"uu\",\n            \"uue\",\n            \"ade\",\n            \"adp\",\n            \"bas\",\n            \"chm\",\n            \"crt\",\n            \"hlp\",\n            \"ins\",\n            \"isp\",\n            \"mda\",\n            \"mdb\",\n            \"mde\",\n            \"mdw\",\n            \"mdt\",\n            \"mdz\",\n            \"ops\",\n            \"pcd\",\n            \"prg\",\n            \"sct\",\n            \"shb\",\n            \"shs\",\n            \"url\",\n            \"vbscript\",\n            \"ace\",\n            \"iso\",\n            \"lzh\",\n            \"cab\",\n            \"mmp\",\n            \"shtml\",\n            \"fxp\",\n            \"grp\",\n            \"msp\",\n            \"mst\",\n            \"rll\",\n            \"part\",\n            \"docm\",\n            \"wmf\",\n            \"lha\",\n            \"jpeg\",\n            \"csv\",\n            \"sss\",\n            \"htm\"\n        ],\n        \"allowed_file_types\": [\n            \"pdf\",\n            \"docx\",\n            \"xlsx\",\n            \"pptx\",\n            \"txt\",\n            \"jpg\",\n            \"png\"\n        ],\n        \"max_attachment_size_mb\": \"50.00\",\n        \"is_active\": true,\n        \"created_at\": \"2025-11-12 06:30:00.47709+00\",\n        \"updated_at\": \"2025-11-12 06:30:00.47709+00\"\n    },\n    {\n        \"policy_id\": \"2a14ac90-e126-499e-9869-ac8ab6384692\",\n        \"policy_name\": \"Allow only internalmails5\",\n        \"policy_description\": \"okk\",\n        \"blocked_file_types\": [\n            \"bat\",\n            \"cmd\",\n            \"com\",\n            \"pif\",\n            \"scr\",\n            \"vbs\",\n            \"js\",\n            \"jse\",\n            \"jar\",\n            \"msi\",\n            \"app\",\n            \"deb\",\n            \"dmg\",\n            \"vb\",\n            \"vbe\",\n            \"wsc\",\n            \"wsf\",\n            \"wsh\",\n            \"hta\",\n            \"cpl\",\n            \"msc\",\n            \"reg\",\n            \"lnk\",\n            \"inf\",\n            \"sys\",\n            \"dll\",\n            \"mim\",\n            \"b64\",\n            \"bhx\",\n            \"hqx\",\n            \"xxe\",\n            \"uu\",\n            \"uue\",\n            \"ade\",\n            \"adp\",\n            \"bas\",\n            \"chm\",\n            \"crt\",\n            \"hlp\",\n            \"ins\",\n            \"isp\",\n            \"mda\",\n            \"mdb\",\n            \"mde\",\n            \"mdw\",\n            \"mdt\",\n            \"mdz\",\n            \"ops\",\n            \"pcd\",\n            \"prg\",\n            \"sct\",\n            \"shb\",\n            \"shs\",\n            \"vbscript\",\n            \"ace\",\n            \"iso\",\n            \"lzh\",\n            \"cab\",\n            \"mmp\",\n            \"shtml\",\n            \"fxp\",\n            \"grp\",\n            \"msp\",\n            \"mst\",\n            \"rll\",\n            \"part\",\n            \"docm\",\n            \"wmf\",\n            \"lha\",\n            \"csv\",\n            \"sss\"\n        ],\n        \"allowed_file_types\": [\n            \"jpeg\",\n            \"jpg\",\n            \"png\",\n            \"pdf\",\n            \"htm\",\n            \"exe\",\n            \"url\"\n        ],\n        \"max_attachment_size_mb\": \"3.00\",\n        \"is_active\": true,\n        \"created_at\": \"2025-11-11 12:21:16.129548+00\",\n        \"updated_at\": \"2025-11-11 12:21:16.129548+00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Count",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/attachment/count/devtest11.yukthi.net",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"attachment",
+								"count",
+								"devtest11.yukthi.net"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/attachment/count/devtest11.yukthi.net",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"attachment",
+										"count",
+										"devtest11.yukthi.net"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "125"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 08:50:38 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"total_attachment_policies\": 4\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch one",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/attachment/detail/devtest11.yukthi.net/440da3c9-dc30-4ffb-b330-9f70561d9701",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"attachment",
+								"detail",
+								"devtest11.yukthi.net",
+								"440da3c9-dc30-4ffb-b330-9f70561d9701"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/attachment/detail/devtest11.yukthi.net/440da3c9-dc30-4ffb-b330-9f70561d9701",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"attachment",
+										"detail",
+										"devtest11.yukthi.net",
+										"440da3c9-dc30-4ffb-b330-9f70561d9701"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "846"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 08:55:22 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"policy_id\": \"440da3c9-dc30-4ffb-b330-9f70561d9701\",\n    \"policy_name\": \"Standard Attachment Policy\",\n    \"policy_description\": \"Allows common file types with size limit\",\n    \"blocked_file_types\": [\n        \"ace\",\n        \"ade\",\n        \"adp\",\n        \"app\",\n        \"b64\",\n        \"bas\",\n        \"bat\",\n        \"bhx\",\n        \"cab\",\n        \"chm\",\n        \"cmd\",\n        \"com\",\n        \"cpl\",\n        \"crt\",\n        \"csv\",\n        \"deb\",\n        \"dll\",\n        \"dmg\",\n        \"docm\",\n        \"exe\",\n        \"fxp\",\n        \"grp\",\n        \"hlp\",\n        \"hqx\",\n        \"hta\",\n        \"htm\",\n        \"inf\",\n        \"ins\",\n        \"isp\",\n        \"iso\",\n        \"jar\",\n        \"jpeg\",\n        \"js\",\n        \"jse\",\n        \"lha\",\n        \"lnk\",\n        \"lzh\",\n        \"mda\",\n        \"mdb\",\n        \"mde\",\n        \"mdt\",\n        \"mdw\",\n        \"mdz\",\n        \"mim\",\n        \"mmp\",\n        \"msc\",\n        \"msi\",\n        \"msp\",\n        \"mst\",\n        \"ops\",\n        \"part\",\n        \"pcd\",\n        \"pif\",\n        \"prg\",\n        \"reg\",\n        \"rll\",\n        \"scr\",\n        \"sct\",\n        \"shb\",\n        \"shs\",\n        \"shtml\",\n        \"sss\",\n        \"sys\",\n        \"url\",\n        \"uu\",\n        \"uue\",\n        \"vb\",\n        \"vbe\",\n        \"vbscript\",\n        \"vbs\",\n        \"wmf\",\n        \"wsc\",\n        \"wsf\",\n        \"wsh\",\n        \"xxe\"\n    ],\n    \"allowed_file_types\": [\n        \"docx\",\n        \"jpg\",\n        \"pdf\",\n        \"png\",\n        \"pptx\",\n        \"txt\",\n        \"xlsx\"\n    ],\n    \"max_attachment_size_mb\": \"5.00\",\n    \"is_active\": true,\n    \"created_at\": \"2026-01-07 08:54:28.691436+00\",\n    \"updated_at\": \"2026-01-07 08:54:28.691436+00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/attachment/delete/devtest11.yukthi.net/065304d0-4af8-4a86-a386-cbdebc0aaba7",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"attachment",
+								"delete",
+								"devtest11.yukthi.net",
+								"065304d0-4af8-4a86-a386-cbdebc0aaba7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/attachment/delete/devtest11.yukthi.net/065304d0-4af8-4a86-a386-cbdebc0aaba7",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"attachment",
+										"delete",
+										"devtest11.yukthi.net",
+										"065304d0-4af8-4a86-a386-cbdebc0aaba7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "197"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 08:58:12 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"message\": \"Attachment Policy deleted successfully\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"policy_id\": \"065304d0-4af8-4a86-a386-cbdebc0aaba7\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update it",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"policy_name\": \"Standard Attachment Policy\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"policy_description\": \"Allows common file types with size limit new Nik\",\n    \"blocked_file_types\": [\n        \"ace\",\n        \"ade\",\n        \"adp\",\n        \"app\",\n        \"b64\",\n        \"bas\",\n        \"bat\",\n        \"bhx\",\n        \"cab\",\n        \"chm\",\n        \"cmd\",\n        \"com\",\n        \"cpl\",\n        \"crt\",\n        \"csv\",\n        \"deb\",\n        \"dll\",\n        \"dmg\",\n        \"docm\",\n        \"exe\",\n        \"fxp\",\n        \"grp\",\n        \"hlp\",\n        \"hqx\",\n        \"hta\",\n        \"htm\",\n        \"inf\",\n        \"ins\",\n        \"isp\",\n        \"iso\",\n        \"jar\",\n        \"jpeg\",\n        \"js\",\n        \"jse\",\n        \"lha\",\n        \"lnk\",\n        \"lzh\",\n        \"mda\",\n        \"mdb\",\n        \"mde\",\n        \"mdt\",\n        \"mdw\",\n        \"mdz\",\n        \"mim\",\n        \"mmp\",\n        \"msc\",\n        \"msi\",\n        \"msp\",\n        \"mst\",\n        \"ops\",\n        \"part\",\n        \"pcd\",\n        \"pif\",\n        \"prg\",\n        \"reg\",\n        \"rll\",\n        \"scr\",\n        \"sct\",\n        \"shb\",\n        \"shs\",\n        \"shtml\",\n        \"sss\",\n        \"sys\",\n        \"url\",\n        \"uu\",\n        \"uue\",\n        \"vb\",\n        \"vbe\",\n        \"vbscript\",\n        \"vbs\",\n        \"wmf\",\n        \"wsc\",\n        \"wsf\",\n        \"wsh\",\n        \"xxe\"\n    ],\n    \"allowed_file_types\": [\n        \"docx\",\n        \"jpg\",\n        \"pdf\",\n        \"png\",\n        \"pptx\",\n        \"txt\",\n        \"xlsx\"\n    ],\n    \"max_attachment_size_mb\": \"5.00\",\n    \"is_active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/policy/attachment/update/440da3c9-dc30-4ffb-b330-9f70561d9701",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"attachment",
+								"update",
+								"440da3c9-dc30-4ffb-b330-9f70561d9701"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"policy_name\": \"Standard Attachment Policy\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"policy_description\": \"Allows common file types with size limit new Nik\",\n    \"blocked_file_types\": [\n        \"ace\",\n        \"ade\",\n        \"adp\",\n        \"app\",\n        \"b64\",\n        \"bas\",\n        \"bat\",\n        \"bhx\",\n        \"cab\",\n        \"chm\",\n        \"cmd\",\n        \"com\",\n        \"cpl\",\n        \"crt\",\n        \"csv\",\n        \"deb\",\n        \"dll\",\n        \"dmg\",\n        \"docm\",\n        \"exe\",\n        \"fxp\",\n        \"grp\",\n        \"hlp\",\n        \"hqx\",\n        \"hta\",\n        \"htm\",\n        \"inf\",\n        \"ins\",\n        \"isp\",\n        \"iso\",\n        \"jar\",\n        \"jpeg\",\n        \"js\",\n        \"jse\",\n        \"lha\",\n        \"lnk\",\n        \"lzh\",\n        \"mda\",\n        \"mdb\",\n        \"mde\",\n        \"mdt\",\n        \"mdw\",\n        \"mdz\",\n        \"mim\",\n        \"mmp\",\n        \"msc\",\n        \"msi\",\n        \"msp\",\n        \"mst\",\n        \"ops\",\n        \"part\",\n        \"pcd\",\n        \"pif\",\n        \"prg\",\n        \"reg\",\n        \"rll\",\n        \"scr\",\n        \"sct\",\n        \"shb\",\n        \"shs\",\n        \"shtml\",\n        \"sss\",\n        \"sys\",\n        \"url\",\n        \"uu\",\n        \"uue\",\n        \"vb\",\n        \"vbe\",\n        \"vbscript\",\n        \"vbs\",\n        \"wmf\",\n        \"wsc\",\n        \"wsf\",\n        \"wsh\",\n        \"xxe\"\n    ],\n    \"allowed_file_types\": [\n        \"docx\",\n        \"jpg\",\n        \"pdf\",\n        \"png\",\n        \"pptx\",\n        \"txt\",\n        \"xlsx\"\n    ],\n    \"max_attachment_size_mb\": \"5.00\",\n    \"is_active\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/policy/attachment/update/440da3c9-dc30-4ffb-b330-9f70561d9701",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"attachment",
+										"update",
+										"440da3c9-dc30-4ffb-b330-9f70561d9701"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "197"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 09:05:12 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"message\": \"Attachment Policy updated successfully\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"policy_id\": \"440da3c9-dc30-4ffb-b330-9f70561d9701\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"policy_name\": \"Standard Attachment Policy 321\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"policy_description\": \"Allows common file types with size limit new Nik\",\n    \"blocked_file_types\": [\n        \"ace\",\n        \"ade\",\n        \"adp\",\n        \"app\",\n        \"b64\",\n        \"bas\",\n        \"bat\",\n        \"bhx\",\n        \"cab\",\n        \"chm\",\n        \"cmd\",\n        \"com\",\n        \"cpl\",\n        \"crt\",\n        \"csv\",\n        \"deb\",\n        \"dll\",\n        \"dmg\",\n        \"docm\",\n        \"exe\",\n        \"fxp\",\n        \"grp\",\n        \"hlp\",\n        \"hqx\",\n        \"hta\",\n        \"htm\",\n        \"inf\",\n        \"ins\",\n        \"isp\",\n        \"iso\",\n        \"jar\",\n        \"jpeg\",\n        \"js\",\n        \"jse\",\n        \"lha\",\n        \"lnk\",\n        \"lzh\",\n        \"mda\",\n        \"mdb\",\n        \"mde\",\n        \"mdt\",\n        \"mdw\",\n        \"mdz\",\n        \"mim\",\n        \"mmp\",\n        \"msc\",\n        \"msi\",\n        \"msp\",\n        \"mst\",\n        \"ops\",\n        \"part\",\n        \"pcd\",\n        \"pif\",\n        \"prg\",\n        \"reg\",\n        \"rll\",\n        \"scr\",\n        \"sct\",\n        \"shb\",\n        \"shs\",\n        \"shtml\",\n        \"sss\",\n        \"sys\",\n        \"url\",\n        \"uu\",\n        \"uue\",\n        \"vb\",\n        \"vbe\",\n        \"vbscript\",\n        \"vbs\",\n        \"wmf\",\n        \"wsc\",\n        \"wsf\",\n        \"wsh\",\n        \"xxe\"\n    ],\n    \"allowed_file_types\": [\n        \"docx\",\n        \"jpg\",\n        \"pdf\",\n        \"png\",\n        \"pptx\",\n        \"txt\",\n        \"xlsx\"\n    ],\n    \"max_attachment_size_mb\": \"5.00\",\n    \"is_active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/policy/attachment/create",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"attachment",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"policy_name\": \"Standard Attachment Policy 321\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"policy_description\": \"Allows common file types with size limit new Nik\",\n    \"blocked_file_types\": [\n        \"ace\",\n        \"ade\",\n        \"adp\",\n        \"app\",\n        \"b64\",\n        \"bas\",\n        \"bat\",\n        \"bhx\",\n        \"cab\",\n        \"chm\",\n        \"cmd\",\n        \"com\",\n        \"cpl\",\n        \"crt\",\n        \"csv\",\n        \"deb\",\n        \"dll\",\n        \"dmg\",\n        \"docm\",\n        \"exe\",\n        \"fxp\",\n        \"grp\",\n        \"hlp\",\n        \"hqx\",\n        \"hta\",\n        \"htm\",\n        \"inf\",\n        \"ins\",\n        \"isp\",\n        \"iso\",\n        \"jar\",\n        \"jpeg\",\n        \"js\",\n        \"jse\",\n        \"lha\",\n        \"lnk\",\n        \"lzh\",\n        \"mda\",\n        \"mdb\",\n        \"mde\",\n        \"mdt\",\n        \"mdw\",\n        \"mdz\",\n        \"mim\",\n        \"mmp\",\n        \"msc\",\n        \"msi\",\n        \"msp\",\n        \"mst\",\n        \"ops\",\n        \"part\",\n        \"pcd\",\n        \"pif\",\n        \"prg\",\n        \"reg\",\n        \"rll\",\n        \"scr\",\n        \"sct\",\n        \"shb\",\n        \"shs\",\n        \"shtml\",\n        \"sss\",\n        \"sys\",\n        \"url\",\n        \"uu\",\n        \"uue\",\n        \"vb\",\n        \"vbe\",\n        \"vbscript\",\n        \"vbs\",\n        \"wmf\",\n        \"wsc\",\n        \"wsf\",\n        \"wsh\",\n        \"xxe\"\n    ],\n    \"allowed_file_types\": [\n        \"docx\",\n        \"jpg\",\n        \"pdf\",\n        \"png\",\n        \"pptx\",\n        \"txt\",\n        \"xlsx\"\n    ],\n    \"max_attachment_size_mb\": \"5.00\",\n    \"is_active\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/policy/attachment/create",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"attachment",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "197"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 09:06:15 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"message\": \"Attachment Policy created successfully\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"policy_id\": \"3525a2ee-ee89-4605-93be-396a1f8bf3b4\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Restriction Policy",
+			"item": [
+				{
+					"name": "List All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/restriction/list/devtest11.yukthi.net?page=1&page_size=10",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"restriction",
+								"list",
+								"devtest11.yukthi.net"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/restriction/list/devtest11.yukthi.net?page=1&page_size=10",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"restriction",
+										"list",
+										"devtest11.yukthi.net"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "page_size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "1828"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 09:20:22 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"policy_id\": \"4bd431a8-142e-4010-99fa-a944c73024c8\",\n        \"policy_name\": \"nik ip restriction\",\n        \"policy_description\": \"nik ip restriction\",\n        \"ip_restriction\": [\n            \"1.2.3.4/24\",\n            \"77.4.88.21/24\"\n        ],\n        \"geo_restriction\": [],\n        \"is_active\": true,\n        \"created_at\": \"2026-01-06 06:59:53.205821+00\",\n        \"updated_at\": \"2026-01-06 06:59:53.205821+00\"\n    },\n    {\n        \"policy_id\": \"46c6c4b4-4104-4815-9aac-4369672d95ed\",\n        \"policy_name\": \"mind policyadada\",\n        \"policy_description\": \"ada\",\n        \"ip_restriction\": [],\n        \"geo_restriction\": [],\n        \"is_active\": true,\n        \"created_at\": \"2026-01-06 06:35:54.018425+00\",\n        \"updated_at\": \"2026-01-06 06:35:54.018425+00\"\n    },\n    {\n        \"policy_id\": \"e8b5eba5-f21f-405e-adef-1b11badac5e2\",\n        \"policy_name\": \"test_restrict_kishore\",\n        \"policy_description\": \"policy testing \",\n        \"ip_restriction\": [],\n        \"geo_restriction\": [],\n        \"is_active\": true,\n        \"created_at\": \"2026-01-05 12:36:24.610155+00\",\n        \"updated_at\": \"2026-01-05 12:36:24.610155+00\"\n    },\n    {\n        \"policy_id\": \"7048f2e5-c565-4562-b2e1-8109cf566490\",\n        \"policy_name\": \"test t\",\n        \"policy_description\": \"test update\",\n        \"ip_restriction\": [],\n        \"geo_restriction\": [],\n        \"is_active\": true,\n        \"created_at\": \"2025-12-29 09:50:03.356465+00\",\n        \"updated_at\": \"2026-01-02 07:24:16.754673+00\"\n    },\n    {\n        \"policy_id\": \"0a40945d-247f-4366-83c3-f1d75ae29192\",\n        \"policy_name\": \"Standard Incoming Filter\",\n        \"policy_description\": \"Standard filtering for incoming email security\",\n        \"ip_restriction\": [\n            \"172.16.0.1/24\",\n            \"203.0.113.1/24\"\n        ],\n        \"geo_restriction\": [\n            \"CA\",\n            \"AU\",\n            \"DE\"\n        ],\n        \"is_active\": false,\n        \"created_at\": \"2025-12-30 11:25:43.380037+00\",\n        \"updated_at\": \"2025-12-30 11:25:43.380037+00\"\n    },\n    {\n        \"policy_id\": \"364e4b5b-1be3-4edf-ae87-b8b5e8f85c97\",\n        \"policy_name\": \"Strict Incoming Policy\",\n        \"policy_description\": \"Blocks all incoming emails except from trusted domains\",\n        \"ip_restriction\": [\n            \"192.168.1.100/24\",\n            \"10.0.0.1/24\"\n        ],\n        \"geo_restriction\": [\n            \"IN\",\n            \"US\",\n            \"GB\"\n        ],\n        \"is_active\": true,\n        \"created_at\": \"2025-12-29 10:42:00.663281+00\",\n        \"updated_at\": \"2025-12-29 10:42:00.663281+00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/restriction/count/devtest11.yukthi.net",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"restriction",
+								"count",
+								"devtest11.yukthi.net"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/restriction/count/devtest11.yukthi.net",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"restriction",
+										"count",
+										"devtest11.yukthi.net"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "126"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 09:21:20 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"total_restriction_policies\": 6\n}"
+						}
+					]
+				},
+				{
+					"name": "Detail of one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/restriction/detail/devtest11.yukthi.net/4bd431a8-142e-4010-99fa-a944c73024c8",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"restriction",
+								"detail",
+								"devtest11.yukthi.net",
+								"4bd431a8-142e-4010-99fa-a944c73024c8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/restriction/detail/devtest11.yukthi.net/4bd431a8-142e-4010-99fa-a944c73024c8",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"restriction",
+										"detail",
+										"devtest11.yukthi.net",
+										"4bd431a8-142e-4010-99fa-a944c73024c8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "305"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 09:21:57 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"policy_id\": \"4bd431a8-142e-4010-99fa-a944c73024c8\",\n    \"policy_name\": \"nik ip restriction\",\n    \"policy_description\": \"nik ip restriction\",\n    \"ip_restriction\": [\n        \"1.2.3.4/24\",\n        \"77.4.88.21/24\"\n    ],\n    \"geo_restriction\": [],\n    \"is_active\": true,\n    \"created_at\": \"2026-01-06 06:59:53.205821+00\",\n    \"updated_at\": \"2026-01-06 06:59:53.205821+00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"policy_name\": \"Test from API\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"policy_description\": \"nik ip restriction\",\n    \"ip_restriction\": [\n        \"1.2.3.4/24\",\n        \"77.4.88.21/24\"\n    ],\n    \"geo_restriction\": [],\n    \"is_active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/policy/restriction/create",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"restriction",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"policy_name\": \"Test from API\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"policy_description\": \"nik ip restriction\",\n    \"ip_restriction\": [\n        \"1.2.3.4/24\",\n        \"77.4.88.21/24\"\n    ],\n    \"geo_restriction\": [],\n    \"is_active\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/policy/restriction/create",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"restriction",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "198"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 09:23:07 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"message\": \"Restriction Policy created successfully\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"policy_id\": \"151638ed-cb60-43f9-80a9-7d650f862a4f\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update one",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"policy_name\": \"Test from API\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"policy_description\": \"nik ip restriction - Updated one\",\n    \"ip_restriction\": [\n        \"1.2.3.4/24\",\n        \"77.4.88.21/24\"\n    ],\n    \"geo_restriction\": [],\n    \"is_active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/policy/restriction/update/151638ed-cb60-43f9-80a9-7d650f862a4f",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"restriction",
+								"update",
+								"151638ed-cb60-43f9-80a9-7d650f862a4f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"policy_name\": \"Test from API\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"policy_description\": \"nik ip restriction - Updated one\",\n    \"ip_restriction\": [\n        \"1.2.3.4/24\",\n        \"77.4.88.21/24\"\n    ],\n    \"geo_restriction\": [],\n    \"is_active\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/policy/restriction/update/151638ed-cb60-43f9-80a9-7d650f862a4f",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"restriction",
+										"update",
+										"151638ed-cb60-43f9-80a9-7d650f862a4f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "198"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 09:24:53 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"message\": \"Restriction Policy updated successfully\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"policy_id\": \"151638ed-cb60-43f9-80a9-7d650f862a4f\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete it",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/restriction/delete/devtest11.yukthi.net/151638ed-cb60-43f9-80a9-7d650f862a4f",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"restriction",
+								"delete",
+								"devtest11.yukthi.net",
+								"151638ed-cb60-43f9-80a9-7d650f862a4f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/restriction/delete/devtest11.yukthi.net/151638ed-cb60-43f9-80a9-7d650f862a4f",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"restriction",
+										"delete",
+										"devtest11.yukthi.net",
+										"151638ed-cb60-43f9-80a9-7d650f862a4f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "198"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 09:25:37 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"message\": \"Restriction Policy deleted successfully\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"policy_id\": \"151638ed-cb60-43f9-80a9-7d650f862a4f\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Forwarding Policy",
+			"item": [
+				{
+					"name": "List all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/forwarding/list/devtest11.yukthi.net?page=1&page_size=10",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"forwarding",
+								"list",
+								"devtest11.yukthi.net"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/forwarding/list/devtest11.yukthi.net?page=1&page_size=10",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"forwarding",
+										"list",
+										"devtest11.yukthi.net"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "page_size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "1411"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 09:50:36 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"policy_id\": \"cf2cf86e-30d7-4ed7-9195-e4d22d24f694\",\n        \"policy_name\": \"test-1\",\n        \"policy_description\": \"qwertyu\",\n        \"subject_contains\": [],\n        \"from_emails\": [],\n        \"forward_to_emails\": [],\n        \"is_active\": true,\n        \"created_at\": \"2026-01-02 07:13:50.984653+00\",\n        \"updated_at\": \"2026-01-05 12:09:03.532315+00\"\n    },\n    {\n        \"policy_id\": \"e417bf10-0202-4354-a744-9e14a5b3e85c\",\n        \"policy_name\": \"Standard Incoming Filter\",\n        \"policy_description\": \"Standard filtering for incoming email security\",\n        \"subject_contains\": [\n            \"NOTICE\",\n            \"ALERT\"\n        ],\n        \"from_emails\": [\n            \"support14@company.org\"\n        ],\n        \"forward_to_emails\": [\n            \"support13@company.org\"\n        ],\n        \"is_active\": false,\n        \"created_at\": \"2026-01-02 05:33:01.673269+00\",\n        \"updated_at\": \"2026-01-02 05:33:01.673269+00\"\n    },\n    {\n        \"policy_id\": \"f125fe44-e270-42c3-bcea-8834a1e0ee72\",\n        \"policy_name\": \"Strict Incoming Policy\",\n        \"policy_description\": \"Blocks all incoming emails except from trusted domains\",\n        \"subject_contains\": [\n            \"SPAM\",\n            \"URGENT\",\n            \"IMPORTANT\"\n        ],\n        \"from_emails\": [\n            \"peter13@example.com\"\n        ],\n        \"forward_to_emails\": [\n            \"john13@example.com\"\n        ],\n        \"is_active\": true,\n        \"created_at\": \"2025-12-30 09:26:44.319002+00\",\n        \"updated_at\": \"2025-12-30 09:26:44.319002+00\"\n    },\n    {\n        \"policy_id\": \"ca800cb7-1d2b-4995-984b-82e9b482eed3\",\n        \"policy_name\": \"test value\",\n        \"policy_description\": \"dieidnie\",\n        \"subject_contains\": [\n            \"test\"\n        ],\n        \"from_emails\": [\n            \"alenfrank11@gmail.com\"\n        ],\n        \"forward_to_emails\": [\n            \"alenfrank@gmail.com\"\n        ],\n        \"is_active\": true,\n        \"created_at\": \"2025-12-30 04:18:21.770756+00\",\n        \"updated_at\": \"2025-12-30 04:18:21.770756+00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Count it",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/forwarding/count/devtest11.yukthi.net",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"forwarding",
+								"count",
+								"devtest11.yukthi.net"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/forwarding/count/devtest11.yukthi.net",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"forwarding",
+										"count",
+										"devtest11.yukthi.net"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "125"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 09:51:29 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"total_forwarding_policies\": 4\n}"
+						}
+					]
+				},
+				{
+					"name": "Detail of one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/forwarding/detail/devtest11.yukthi.net/cf2cf86e-30d7-4ed7-9195-e4d22d24f694",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"forwarding",
+								"detail",
+								"devtest11.yukthi.net",
+								"cf2cf86e-30d7-4ed7-9195-e4d22d24f694"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/forwarding/detail/devtest11.yukthi.net/cf2cf86e-30d7-4ed7-9195-e4d22d24f694",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"forwarding",
+										"detail",
+										"devtest11.yukthi.net",
+										"cf2cf86e-30d7-4ed7-9195-e4d22d24f694"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "275"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 09:52:13 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"policy_id\": \"cf2cf86e-30d7-4ed7-9195-e4d22d24f694\",\n    \"policy_name\": \"test-1\",\n    \"policy_description\": \"qwertyu\",\n    \"subject_contains\": [],\n    \"from_emails\": [],\n    \"forward_to_emails\": [],\n    \"is_active\": true,\n    \"created_at\": \"2026-01-02 07:13:50.984653+00\",\n    \"updated_at\": \"2026-01-05 12:09:03.532315+00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"policy_name\": \"Nik Test API\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"policy_description\": \"Some Test by Nik\",\n    \"subject_contains\": [],\n    \"from_emails\": [],\n    \"forward_to_emails\": [],\n    \"is_active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/policy/forwarding/create",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"forwarding",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"policy_name\": \"Nik Test API\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"policy_description\": \"Some Test by Nik\",\n    \"subject_contains\": [],\n    \"from_emails\": [],\n    \"forward_to_emails\": [],\n    \"is_active\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/policy/forwarding/create",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"forwarding",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "197"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 09:53:26 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"message\": \"Forwarding Policy created successfully\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"policy_id\": \"0429f17f-f38e-48f6-b85d-b8c794d5aef4\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update it",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"policy_name\": \"Nik Test API - Updated\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"policy_description\": \"Some Test by Nik 213\",\n    \"subject_contains\": [],\n    \"from_emails\": [],\n    \"forward_to_emails\": [],\n    \"is_active\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/policy/forwarding/update/0429f17f-f38e-48f6-b85d-b8c794d5aef4",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"forwarding",
+								"update",
+								"0429f17f-f38e-48f6-b85d-b8c794d5aef4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"policy_name\": \"Nik Test API - Updated\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"policy_description\": \"Some Test by Nik 213\",\n    \"subject_contains\": [],\n    \"from_emails\": [],\n    \"forward_to_emails\": [],\n    \"is_active\": false\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/policy/forwarding/update/0429f17f-f38e-48f6-b85d-b8c794d5aef4",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"forwarding",
+										"update",
+										"0429f17f-f38e-48f6-b85d-b8c794d5aef4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "197"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 09:54:33 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"message\": \"Forwarding Policy updated successfully\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"policy_id\": \"0429f17f-f38e-48f6-b85d-b8c794d5aef4\"\n}"
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/forwarding/delete/devtest11.yukthi.net/0429f17f-f38e-48f6-b85d-b8c794d5aef4",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"forwarding",
+								"delete",
+								"devtest11.yukthi.net",
+								"0429f17f-f38e-48f6-b85d-b8c794d5aef4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/forwarding/delete/devtest11.yukthi.net/0429f17f-f38e-48f6-b85d-b8c794d5aef4",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"forwarding",
+										"delete",
+										"devtest11.yukthi.net",
+										"0429f17f-f38e-48f6-b85d-b8c794d5aef4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "197"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 09:55:14 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"message\": \"Forwarding Policy deleted successfully\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"policy_id\": \"0429f17f-f38e-48f6-b85d-b8c794d5aef4\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Distribution Policy",
+			"item": [
+				{
+					"name": "List all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/distribution/list/devtest11.yukthi.net?page=1&page_size=10",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"distribution",
+								"list",
+								"devtest11.yukthi.net"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/distribution/list/devtest11.yukthi.net?page=1&page_size=10",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"distribution",
+										"list",
+										"devtest11.yukthi.net"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "page_size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "3902"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 10:19:42 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"policy_id\": \"6d7d6d30-deba-4f92-ba6d-33c7bb887fb6\",\n        \"policy_name\": \"test_kishore\",\n        \"policy_description\": \"test_kishore\",\n        \"rule_type\": \"ANYONE\",\n        \"specific_emails\": [],\n        \"internal_members\": [\n            \"testkishore@devtest11.yukthi.net\",\n            \"benita01@devtest11.yukthi.net\"\n        ],\n        \"external_members\": [\n            \"kishorekumar.b@yukthi.com\"\n        ],\n        \"is_active\": true,\n        \"created_at\": \"2026-01-05 12:34:37.725029+00\",\n        \"updated_at\": \"2026-01-05 12:34:37.725029+00\"\n    },\n    {\n        \"policy_id\": \"fcdb37af-0842-4f4a-909b-afaddfff9099\",\n        \"policy_name\": \"test30 \",\n        \"policy_description\": \"test only\",\n        \"rule_type\": \"DOMAIN_MEMBER\",\n        \"specific_emails\": [],\n        \"internal_members\": [\n            \"esklin@test30.yukthi.net\",\n            \"shant30@test30.yukthi.net\",\n            \"newtest@test30.yukthi.net\"\n        ],\n        \"external_members\": [\n            \"benitayspl@proton.me\"\n        ],\n        \"is_active\": true,\n        \"created_at\": \"2026-01-05 12:15:46.870621+00\",\n        \"updated_at\": \"2026-01-05 12:15:46.870621+00\"\n    },\n    {\n        \"policy_id\": \"cad18a16-09ee-42ea-ad2e-e36f556ed82a\",\n        \"policy_name\": \"Group_check\",\n        \"policy_description\": \"Testing for group expand\",\n        \"rule_type\": \"GROUP_MEMBER\",\n        \"specific_emails\": [],\n        \"internal_members\": [\n            \"benita01@devtest11.yukthi.net\",\n            \"test@devtest11.yukthi.net\"\n        ],\n        \"external_members\": [\n            \"esklinmary@gmail.com\"\n        ],\n        \"is_active\": true,\n        \"created_at\": \"2026-01-05 11:46:13.73939+00\",\n        \"updated_at\": \"2026-01-05 12:12:57.52924+00\"\n    },\n    {\n        \"policy_id\": \"e99977f0-daae-4374-83ea-17827cc93d6d\",\n        \"policy_name\": \"test-0001\",\n        \"policy_description\": \"\",\n        \"rule_type\": \"ANYONE\",\n        \"specific_emails\": [],\n        \"internal_members\": [],\n        \"external_members\": [],\n        \"is_active\": true,\n        \"created_at\": \"2026-01-05 12:12:11.593662+00\",\n        \"updated_at\": \"2026-01-05 12:12:11.593662+00\"\n    },\n    {\n        \"policy_id\": \"dc25e019-31b8-4624-9be7-e01b3ce10601\",\n        \"policy_name\": \"mgstest\",\n        \"policy_description\": \"rvbrb\",\n        \"rule_type\": \"GROUP_MEMBER\",\n        \"specific_emails\": [],\n        \"internal_members\": [],\n        \"external_members\": [],\n        \"is_active\": true,\n        \"created_at\": \"2026-01-05 12:00:25.801999+00\",\n        \"updated_at\": \"2026-01-05 12:00:25.801999+00\"\n    },\n    {\n        \"policy_id\": \"a9f80512-7e3f-460e-8e42-d8c5f4fa7fc8\",\n        \"policy_name\": \"Group check\",\n        \"policy_description\": \"Testing for group expand\",\n        \"rule_type\": \"GROUP_MEMBER\",\n        \"specific_emails\": [],\n        \"internal_members\": [\n            \"benita01@devtest11.yukthi.net\",\n            \"test@devtest11.yukthi.net\"\n        ],\n        \"external_members\": [],\n        \"is_active\": true,\n        \"created_at\": \"2026-01-05 11:57:06.902733+00\",\n        \"updated_at\": \"2026-01-05 11:57:06.902733+00\"\n    },\n    {\n        \"policy_id\": \"e57d0e02-d6f9-4fc5-8507-f572552344df\",\n        \"policy_name\": \"test\",\n        \"policy_description\": \"test\",\n        \"rule_type\": \"ANYONE\",\n        \"specific_emails\": [],\n        \"internal_members\": [\n            \"alenfrank@devtest11.yukthi.net\"\n        ],\n        \"external_members\": [\n            \"thomassontwo@test.com\"\n        ],\n        \"is_active\": true,\n        \"created_at\": \"2026-01-05 11:56:49.801584+00\",\n        \"updated_at\": \"2026-01-05 11:56:49.801584+00\"\n    },\n    {\n        \"policy_id\": \"a8b3f8b6-8f6a-434a-a482-e164460abc2f\",\n        \"policy_name\": \"Standard Incoming Filter\",\n        \"policy_description\": \"Standard filtering for incoming email security\",\n        \"rule_type\": \"ANYONE\",\n        \"specific_emails\": [\n            \"admin11@company.org\",\n            \"support11@company.org\"\n        ],\n        \"internal_members\": [\n            \"test@internal.com\",\n            \"admin@partner.org\"\n        ],\n        \"external_members\": [\n            \"admin@company.org\",\n            \"support@company.org\"\n        ],\n        \"is_active\": false,\n        \"created_at\": \"2025-12-30 09:24:24.520077+00\",\n        \"updated_at\": \"2025-12-30 09:24:24.520077+00\"\n    },\n    {\n        \"policy_id\": \"5fd5a6d6-36e2-4541-94f1-668a7d6c611e\",\n        \"policy_name\": \"Strict Incoming Policy\",\n        \"policy_description\": \"Blocks all incoming emails except from trusted domains\",\n        \"rule_type\": \"ANYONE\",\n        \"specific_emails\": [\n            \"john11@example.com\",\n            \"jane11@example.com\"\n        ],\n        \"internal_members\": [\n            \"abc@gmail.com\",\n            \"xyz@company.com\"\n        ],\n        \"external_members\": [\n            \"john@example.com\",\n            \"jane@example.com\"\n        ],\n        \"is_active\": true,\n        \"created_at\": \"2025-12-30 09:24:23.954912+00\",\n        \"updated_at\": \"2025-12-30 09:24:23.954912+00\"\n    },\n    {\n        \"policy_id\": \"55542131-873c-43bc-8c25-1a74ebd64df7\",\n        \"policy_name\": \"General Policy\",\n        \"policy_description\": \"TEST VALUE\",\n        \"rule_type\": \"GROUP_MEMBER\",\n        \"specific_emails\": [],\n        \"internal_members\": [\n            \"alenfrank@devtest11.yukthi.net\",\n            \"nikhil007@devtest11.yukthi.net\"\n        ],\n        \"external_members\": [],\n        \"is_active\": true,\n        \"created_at\": \"2025-12-29 13:34:57.41179+00\",\n        \"updated_at\": \"2025-12-30 02:19:37.749496+00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Count",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/distribution/count/devtest11.yukthi.net",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"distribution",
+								"count",
+								"devtest11.yukthi.net"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/distribution/count/devtest11.yukthi.net",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"distribution",
+										"count",
+										"devtest11.yukthi.net"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "128"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 10:20:12 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"total_distribution_policies\": 10\n}"
+						}
+					]
+				},
+				{
+					"name": "Detail of one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/distribution/detail/devtest11.yukthi.net/6d7d6d30-deba-4f92-ba6d-33c7bb887fb6",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"distribution",
+								"detail",
+								"devtest11.yukthi.net",
+								"6d7d6d30-deba-4f92-ba6d-33c7bb887fb6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/distribution/detail/devtest11.yukthi.net/6d7d6d30-deba-4f92-ba6d-33c7bb887fb6",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"distribution",
+										"detail",
+										"devtest11.yukthi.net",
+										"6d7d6d30-deba-4f92-ba6d-33c7bb887fb6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "403"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 10:22:33 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"policy_id\": \"6d7d6d30-deba-4f92-ba6d-33c7bb887fb6\",\n    \"policy_name\": \"test_kishore\",\n    \"policy_description\": \"test_kishore\",\n    \"rule_type\": \"ANYONE\",\n    \"specific_emails\": [],\n    \"internal_members\": [\n        \"testkishore@devtest11.yukthi.net\",\n        \"benita01@devtest11.yukthi.net\"\n    ],\n    \"external_members\": [\n        \"kishorekumar.b@yukthi.com\"\n    ],\n    \"is_active\": true,\n    \"created_at\": \"2026-01-05 12:34:37.725029+00\",\n    \"updated_at\": \"2026-01-05 12:34:37.725029+00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create One",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"policy_name\": \"ew test 3\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"policy_description\": \"test. kishore\",\n    \"rule_type\": \"GROUP_MEMBER\",\n    \"specific_emails\": [],\n    \"internal_members\": [\n        \"testkishore@devtest11.yukthi.net\",\n        \"benita01@devtest11.yukthi.net\"\n    ],\n    \"external_members\": [\n        \"kishorekumar.b@yukthi.com\"\n    ],\n    \"is_active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/policy/distribution/create",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"distribution",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"policy_name\": \"ew test 3\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"policy_description\": \"test. kishore\",\n    \"rule_type\": \"GROUP_MEMBER\",\n    \"specific_emails\": [],\n    \"internal_members\": [\n        \"testkishore@devtest11.yukthi.net\",\n        \"benita01@devtest11.yukthi.net\"\n    ],\n    \"external_members\": [\n        \"kishorekumar.b@yukthi.com\"\n    ],\n    \"is_active\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/policy/distribution/create",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"distribution",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "199"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 10:50:39 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"message\": \"Distribution Policy created successfully\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"policy_id\": \"23fddcdf-488e-49d6-9ae1-1223565ee126\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update it",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"policy_name\": \"ew test 3\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"policy_description\": \"test. Nik\",\n    \"rule_type\": \"ANYONE\",\n    \"specific_emails\": [],\n    \"internal_members\": [\n        \"testkishore@devtest11.yukthi.net\",\n        \"benita01@devtest11.yukthi.net\"\n    ],\n    \"external_members\": [\n        \"kishorekumar.b@yukthi.com\"\n    ],\n    \"is_active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/policy/distribution/update/23fddcdf-488e-49d6-9ae1-1223565ee126",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"distribution",
+								"update",
+								"23fddcdf-488e-49d6-9ae1-1223565ee126"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"policy_name\": \"ew test 3\",\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"policy_description\": \"test. Nik\",\n    \"rule_type\": \"ANYONE\",\n    \"specific_emails\": [],\n    \"internal_members\": [\n        \"testkishore@devtest11.yukthi.net\",\n        \"benita01@devtest11.yukthi.net\"\n    ],\n    \"external_members\": [\n        \"kishorekumar.b@yukthi.com\"\n    ],\n    \"is_active\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/policy/distribution/update/23fddcdf-488e-49d6-9ae1-1223565ee126",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"distribution",
+										"update",
+										"23fddcdf-488e-49d6-9ae1-1223565ee126"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "199"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 10:53:11 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"message\": \"Distribution Policy updated successfully\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"policy_id\": \"23fddcdf-488e-49d6-9ae1-1223565ee126\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete it",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/policy/distribution/delete/devtest11.yukthi.net/23fddcdf-488e-49d6-9ae1-1223565ee126",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"policy",
+								"distribution",
+								"delete",
+								"devtest11.yukthi.net",
+								"23fddcdf-488e-49d6-9ae1-1223565ee126"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/policy/distribution/delete/devtest11.yukthi.net/23fddcdf-488e-49d6-9ae1-1223565ee126",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"policy",
+										"distribution",
+										"delete",
+										"devtest11.yukthi.net",
+										"23fddcdf-488e-49d6-9ae1-1223565ee126"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-length",
+									"value": "199"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "date",
+									"value": "Wed, 07 Jan 2026 10:54:14 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain_name\": \"devtest11.yukthi.net\",\n    \"message\": \"Distribution Policy deleted successfully\",\n    \"organization_id\": \"530b2473-b224-5f54-9185-89189ee72df8\",\n    \"policy_id\": \"23fddcdf-488e-49d6-9ae1-1223565ee126\"\n}"
+						}
+					]
+				}
+			]
 		}
 	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "d9a23ac5-c6ce-46c8-8c06-ebe79bb1a8cc",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "X-API-Key",
+				"type": "string"
+			}
+		]
+	},
 	"event": [
 		{
 			"listen": "prerequest",
