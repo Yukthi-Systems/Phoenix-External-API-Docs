@@ -31,4 +31,4 @@ Note: API Keys can be obtained by visiting the API Keys section in admin panel. 
 
 1. Obtain your API key by visiting the API Keys section in the admin panel, before making any requests and refer to the [Permissions](./permissions) guide for required permissions and its understanding.
 2. Familiarize yourself with the [Authentication](./authentication) mechanism
-3. Explore the [Endpoints](./endpoints) section to understand available resources and operations
+3. Explore the `Endpoints` section to understand available resources and operations
