@@ -1,30 +1,34 @@
 # Authentication
 
-All API requests require authentication using an API key.
+All API requests require authentication using an API key. We follow a simple authentication mechanism where the API key is included in the request headers.
 
-## API Key Header
+Header Key name: `X-API-Key`
 
-Include your API key in the `x-api-key` header:
-```bash
-curl -X GET "{{BASE_URL}}/endpoint" \
-  -H "x-api-key: your-api-key-here"
-```
+Header Value: Your unique API key string.
 
-## Verify Your API Key
+## Obtaining an API Key
 
-Use the `/self/whoami` endpoint to verify your API key and check permissions:
-```bash
-curl -X GET "{{BASE_URL}}/self/whoami" \
-  -H "x-api-key: your-api-key"
-```
+To obtain an API key, you need to have an administrator account. Once logged in, navigate to the API section in your account settings and generate a new API key. Make sure to store this key securely, as it will not be displayed again.
 
-Response:
-```json
-{
-  "organization_id": "530b2473-b224-5f54-9185-89189ee72df8",
-  "permissions": [
-    "domain:view",
-    "mailbox:view"
-  ]
-}
-```
+
+This is how the API key view panel looks like:
+
+![API Key View Panel](/img/admin-panel/api-key-view.png)
+
+
+Click on Create API Key Button and then follow the instructions to generate a new key.
+
+Fill the basic info like Name and Description for the API key.
+
+![API Key Create Step 1](/img/admin-panel/api-key-create-1.png)
+
+
+Select the appropriate permissions for the API key based on your requirements.
+
+![API Key Create Step 2](/img/admin-panel/api-key-create-2.png)
+
+Do a complete review of the information provided before creating the API key.
+
+![API Key Create Step 3](/img/admin-panel/api-key-create-3.png)
+
+Click on Create API Key Button to generate the key.
