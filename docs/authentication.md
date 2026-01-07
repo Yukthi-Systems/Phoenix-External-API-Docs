@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 # Authentication
 
 All API requests require authentication using an API key.
