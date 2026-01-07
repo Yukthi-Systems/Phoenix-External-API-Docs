@@ -7,17 +7,12 @@ const sidebars: SidebarsConfig = {
     'authentication',
     {
       type: 'category',
-      label: 'API Endpoints',
+      label: 'Health Checks',
       items: [
-        'api/health',
-        'api/self-checks',
-        'api/domains',
-        'api/cautions',
-        'api/disclaimers',
-        'api/departments',
+        'api/health/check_api_health',
       ],
     },
-    'api/errors',
+    // 'api/errors',
   ],
 };
 
