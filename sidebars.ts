@@ -9,10 +9,9 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Health Checks',
       items: [
-        'api/health/check_api_health',
+        'api/health/index',
       ],
     },
-    // 'api/errors',
   ],
 };
 
