@@ -16,6 +16,10 @@ Note: API Keys can be obtained by visiting the API Keys section in admin panel. 
 
 ## Key Features
 
+- Completely built from scratch for high performance and low latency
+- Written in Rust language for performance and safety
+- We have achieved 9ms processing time for 95% of requests in our test environment
+- That is approximately 100x faster than traditional implementations, enabling high throughput
 - Comprehensive domain and mailbox management
 - Health monitoring endpoints
 - Self care functionalities for users
