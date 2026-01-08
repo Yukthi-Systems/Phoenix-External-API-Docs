@@ -1,100 +1,122 @@
 # V3 External API Documentation
 
-Complete API documentation for the V3 External API, built with [Docusaurus](https://docusaurus.io/).
+High-performance REST API documentation for email infrastructure management built with Docusaurus.
 
-## Quick Start
 
-```bash
-npm install
-npm start
-```
+## 🚀 Features
 
-Visit `http://localhost:3000`
+- **Modern UI**: Clean, responsive design with dark/light theme support
+- **Interactive Documentation**: Comprehensive API reference with code examples
+- **Mobile Friendly**: Optimized for all devices
+- **Easy Updates**: Just edit markdown files to update docs
 
-## Development
+## 📋 Prerequisites
 
-### Prerequisites
-
-- Node.js 18+
+- Node.js 18.0 or higher
 - npm or yarn
 
-### Installation
+## 🛠️ Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/Yukthi-Systems/V3-External-API-Docs.git
+
+# Navigate to the project
+cd V3-External-API-Docs
+
+# Install dependencies
 npm install
 ```
 
-### Local Development
+## 🏃 Local Development
 
 ```bash
+# Start development server
 npm start
 ```
 
-Starts dev server at `http://localhost:3000`. Hot reload enabled.
+Visit `http://localhost:3000` to view the documentation.
 
-### Build
+## 🏗️ Build
 
 ```bash
+# Build for production
 npm run build
-```
 
-Generates static files in `build/` directory.
-
-### Preview Build
-
-```bash
+# Serve built files locally
 npm run serve
 ```
 
-Preview production build locally.
+## 📁 Project Structure
 
-## Docker Deployment
-
-### Build Image
-
-```bash
-docker build -t v3-docs .
+```
+V3-External-API-Docs/
+├── docs/                  # Documentation markdown files
+│   ├── intro.md
+│   └── api/              # API endpoint documentation
+├── src/
+│   ├── pages/            # Custom pages
+│   │   └── index.tsx     # Homepage
+│   ├── css/              # Custom styles
+│   └── theme/            # Custom components
+│       ├── Footer/
+│       └── Navbar/
+├── static/               # Static assets
+│   └── img/             # Images and logos
+├── docusaurus.config.ts  # Docusaurus configuration
+└── sidebars.ts           # Sidebar configuration
 ```
 
-### Run Container
+## ✏️ Adding Documentation
 
-```bash
-docker-compose up -d
-```
+1. Create a new `.md` file in the `docs/` directory
+2. Add frontmatter:
+   ```md
+   ---
+   id: your-doc-id
+   title: Your Title
+   sidebar_position: 1
+   ---
+   
+   Your content here...
+   ```
+3. Update `sidebars.ts` if needed
+4. Commit and push changes
 
-Access at `http://localhost:3000`
+## 🎨 Customization
+
+### Styling
+Edit `src/css/custom.css` to customize colors, fonts, and layouts.
+
+### Components
+Override default components in `src/theme/` directory.
+
+### Configuration
+Modify `docusaurus.config.ts` for site-wide settings.
 
 
-## Versioning
-
-Create new version:
-
-```bash
-npm run docusaurus docs:version 1.0.0
-```
-
-This snapshots current docs as version 1.0.0.
-
-## Configuration
-
-- `docusaurus.config.ts` - Main config
-- `sidebars.ts` - Sidebar navigation
-- `src/css/custom.css` - Custom styles
-
-
-## Project Links
-
-- **Repository**: [Yukthi-Systems/V3-External-API-Docs](https://github.com/Yukthi-Systems/V3-External-API-Docs)
-- **Live Docs**: `https://v3-api.docs.yukthi.net/`
-
-## Contributing
+## 🤝 Contributing
 
 1. Fork the repository
-2. Create feature branch: `git checkout -b feature/new-docs`
-3. Commit changes: `git commit -am 'Add new documentation'`
-4. Push: `git push origin feature/new-docs`
-5. Open Pull Request
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## License
+## 📝 License
 
-Copyright © 2025 Yukthi Systems
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🔗 Links
+
+- [Live Documentation](https://v3-api.docs.yukthi.net)
+- [Report Issues](https://github.com/Yukthi-Systems/V3-External-API-Docs/issues)
+- [Docusaurus Documentation](https://docusaurus.io/)
+
+## 💡 Support
+
+For questions or support, please [open an issue](https://github.com/Yukthi-Systems/V3-External-API-Docs/issues).
+
+---
+
+**Built with ❤️ by Yukthi Systems**
