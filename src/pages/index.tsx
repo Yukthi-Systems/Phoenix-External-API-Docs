@@ -225,7 +225,7 @@ export default function Home() {
       <style>
         {`
  
- @media (min-width: 768px){
+ @media (min-width: 1024px){
 
  .navbar {
   position: absolute;
@@ -233,7 +233,7 @@ export default function Home() {
   box-shadow: none;
   border: none;
   width: 100%;
-  max-width: 60%;
+  max-width: 1024px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -244,6 +244,7 @@ export default function Home() {
 }
  }
 
+ 
         
 `}
       </style>

@@ -24,6 +24,18 @@ const config: Config = {
     locales: ["en"],
   },
 
+  themes: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+        language: ["en"],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      },
+    ],
+  ],
+
   presets: [
     [
       "classic",
@@ -44,15 +56,31 @@ const config: Config = {
   themeConfig: {
     image: "img/logo-new.png",
     metadata: [
-      {name: 'description', content: 'Programmatically manage Domains, Cautions, Disclaimers, and Departments with our robust REST API'},
-      {property: 'og:title', content: 'V3 External API Documentation'},
-      {property: 'og:description', content: 'High-performance REST API for email infrastructure'},
-      {property: 'og:image', content: 'https://v3-api.docs.yukthi.net/img/logo-new.png'},
-      {property: 'og:type', content: 'website'},
-      {name: 'twitter:card', content: 'summary_large_image'},
-      {name: 'twitter:title', content: 'V3 External API Documentation'},
-      {name: 'twitter:description', content: 'High-performance REST API for email infrastructure'},
-      {name: 'twitter:image', content: 'https://v3-api.docs.yukthi.net/img/logo-new.png'},
+      {
+        name: "description",
+        content:
+          "Programmatically manage Domains, Cautions, Disclaimers, and Departments with our robust REST API",
+      },
+      { property: "og:title", content: "V3 External API Documentation" },
+      {
+        property: "og:description",
+        content: "High-performance REST API for email infrastructure",
+      },
+      {
+        property: "og:image",
+        content: "https://v3-api.docs.yukthi.net/img/logo-new.png",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "V3 External API Documentation" },
+      {
+        name: "twitter:description",
+        content: "High-performance REST API for email infrastructure",
+      },
+      {
+        name: "twitter:image",
+        content: "https://v3-api.docs.yukthi.net/img/logo-new.png",
+      },
     ],
     colorMode: {
       respectPrefersColorScheme: true,
