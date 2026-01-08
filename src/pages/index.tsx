@@ -66,7 +66,7 @@ export default function Home() {
             </div>
             <div className={styles.stat}>
               <div className={`${styles.statDot} ${styles.blue}`} />
-              <span>&lt;100ms Response</span>
+              <span>&lt;10ms Response</span>
             </div>
             <div className={styles.stat}>
               <div className={`${styles.statDot} ${styles.violet}`} />
@@ -87,7 +87,7 @@ export default function Home() {
             <FeatureCard
               icon="🔐"
               title="Enterprise Security"
-              description="Manage cautions and disclaimers to ensure compliance across your organization."
+              description="Written in Rust for memory safety, with robust authentication and data protection mechanisms."
             />
             <FeatureCard
               icon="🚀"
@@ -113,29 +113,64 @@ export default function Home() {
                 path: "/docs/api/health",
               },
               {
-                name: "Domains",
-                desc: "Domain management",
+                name: "Self API Check",
+                desc: "API verification",
+                path: "/docs/api/self-checks",
+              },
+              {
+                name: "Domain Management",
+                desc: "Manage email domains",
                 path: "/docs/api/domains",
               },
               {
-                name: "Cautions",
-                desc: "Email cautions",
+                name: "Mailbox Management",
+                desc: "Manage user mailboxes",
+                path: "/docs/api/mailboxes",
+              },
+              {
+                name: "Caution Management",
+                desc: "Handle email cautions",
                 path: "/docs/api/cautions",
               },
               {
-                name: "Disclaimers",
-                desc: "Email disclaimers",
+                name: "Disclaimer Management",
+                desc: "Set up email disclaimers",
                 path: "/docs/api/disclaimers",
               },
               {
-                name: "Departments",
-                desc: "Organization structure",
+                name: "Department Management",
+                desc: "Manage Departments for mailboxes",
                 path: "/docs/api/departments",
               },
               {
-                name: "Self Checks",
-                desc: "API verification",
-                path: "/docs/api/self-checks",
+                name: "Filter Policy",
+                desc: "Email filtering rules",
+                path: "/docs/api/filter-policies",
+              },
+              {
+                name: "General Policy",
+                desc: "Overall email policies",
+                path: "/docs/api/general-policies",
+              },
+              {
+                name: "Attachment Policy",
+                desc: "Manage attachment rules",
+                path: "/docs/api/attachment-policies",
+              },
+              {
+                name: "Restriction Policy",
+                desc: "Set IP and Geo restrictions",
+                path: "/docs/api/restriction-policies",
+              },
+              {
+                name: "Forwarding Policy",
+                desc: "Email forwarding rules",
+                path: "/docs/api/forwarding-policies",
+              },
+              {
+                name: "Distribution Policy",
+                desc: "Manage email distribution",
+                path: "/docs/api/distribution-policies",
               },
             ].map((endpoint, idx) => (
               <a

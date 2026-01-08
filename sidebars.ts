@@ -12,6 +12,15 @@ const sidebars: SidebarsConfig = {
         'api/health/index',
       ],
     },
+    {
+      type: 'category',
+      label: 'Self API Checks',
+      items: [
+        'api/self-checks/index',
+        'api/self-checks/clear-cache',
+      ],
+    },
+
   ],
 };
 
