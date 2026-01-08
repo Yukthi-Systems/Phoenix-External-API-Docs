@@ -22,172 +22,231 @@ function FeatureCard({
 
 export default function Home() {
   return (
-    <Layout title="Home" description="V3 External API Documentation">
-      <div className={styles.hero}>
-        <div className={styles.gradientBlur1} />
-        <div className={styles.gradientBlur2} />
+    <>
+      <Layout title="Home" description="V3 External API Documentation">
+        <div className={`${styles.hero}  homepage`}>
+          <div className={styles.gradientBlur1} />
+          <div className={styles.gradientBlur2} />
+          <div className={styles.gradientBlur3} />
 
-        <div className={styles.container}>
-          <div className={styles.badge}>
-            <span className={styles.pulse} />
-            <span className={styles.pulseDot} />
-            Version 3.0 Live
-          </div>
-
-          <h1 className={styles.title}>
-            Build faster with
-            <br />
-            our External API
-          </h1>
-
-          <p className={styles.subtitle}>
-            Programmatically manage Domains, Cautions, Disclaimers, and
-            Departments with our robust, secure, and high-performance REST API.
-          </p>
-
-          <div className={styles.buttons}>
-            <a href="/docs/intro" className={styles.primaryBtn}>
-              Read the Docs
-              <span className={styles.arrow}>→</span>
-            </a>
-            <a
-              href="/postman/collection.json"
-              download="V3-External-API.postman_collection.json"
-              className={styles.secondaryBtn}
-            >
-              Download Postman Collection
-            </a>
-          </div>
-
-          <div className={styles.stats}>
-            <div className={styles.stat}>
-              <div className={`${styles.statDot} ${styles.green}`} />
-              <span>99.9% Uptime</span>
+          <div className={styles.container}>
+            <div className={styles.badge}>
+              <span className={styles.pulse} />
+              <span className={styles.pulseDot} />
+              Version 3.0 Live
             </div>
-            <div className={styles.stat}>
-              <div className={`${styles.statDot} ${styles.blue}`} />
-              <span>&lt;10ms Response</span>
-            </div>
-            <div className={styles.stat}>
-              <div className={`${styles.statDot} ${styles.violet}`} />
-              <span>RESTful Architecture</span>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div className={styles.features}>
-        <div className={styles.container}>
-          <div className={styles.grid}>
-            <FeatureCard
-              icon="⚡"
-              title="Developer Experience"
-              description="Intuitive API design with clear documentation, interactive examples, and code samples."
-            />
-            <FeatureCard
-              icon="🔐"
-              title="Enterprise Security"
-              description="Written in Rust for memory safety, with robust authentication and data protection mechanisms."
-            />
-            <FeatureCard
-              icon="🚀"
-              title="High Performance"
-              description="Optimized endpoints with sub-millisecond latency and 99.9% uptime guarantee."
-            />
-          </div>
-        </div>
-      </div>
+            <h1 className={styles.title}>
+              Build faster with
+              <br />
+              <span className={styles.titleGradient}>our External API</span>
+            </h1>
 
-      <div className={styles.endpoints}>
-        <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>API Endpoints</h2>
-          <p className={styles.sectionSubtitle}>
-            Complete REST API for email infrastructure management
-          </p>
+            <p className={styles.subtitle}>
+              Programmatically manage Domains, Cautions, Disclaimers, and
+              Departments with our robust, secure, and high-performance REST
+              API.
+            </p>
 
-          <div className={styles.endpointGrid}>
-            {[
-              {
-                name: "Health",
-                desc: "System monitoring",
-                path: "/docs/api/health",
-              },
-              {
-                name: "Self API Check",
-                desc: "API verification",
-                path: "/docs/api/self-checks",
-              },
-              {
-                name: "Domain Management",
-                desc: "Manage email domains",
-                path: "/docs/api/domains",
-              },
-              {
-                name: "Mailbox Management",
-                desc: "Manage user mailboxes",
-                path: "/docs/api/mailboxes",
-              },
-              {
-                name: "Caution Management",
-                desc: "Handle email cautions",
-                path: "/docs/api/cautions",
-              },
-              {
-                name: "Disclaimer Management",
-                desc: "Set up email disclaimers",
-                path: "/docs/api/disclaimers",
-              },
-              {
-                name: "Department Management",
-                desc: "Manage Departments for mailboxes",
-                path: "/docs/api/departments",
-              },
-              {
-                name: "Filter Policy",
-                desc: "Email filtering rules",
-                path: "/docs/api/filter-policies",
-              },
-              {
-                name: "General Policy",
-                desc: "Overall email policies",
-                path: "/docs/api/general-policies",
-              },
-              {
-                name: "Attachment Policy",
-                desc: "Manage attachment rules",
-                path: "/docs/api/attachment-policies",
-              },
-              {
-                name: "Restriction Policy",
-                desc: "Set IP and Geo restrictions",
-                path: "/docs/api/restriction-policies",
-              },
-              {
-                name: "Forwarding Policy",
-                desc: "Email forwarding rules",
-                path: "/docs/api/forwarding-policies",
-              },
-              {
-                name: "Distribution Policy",
-                desc: "Manage email distribution",
-                path: "/docs/api/distribution-policies",
-              },
-            ].map((endpoint, idx) => (
-              <a
-                key={idx}
-                href={`${endpoint.path}`}
-                className={styles.endpointCard}
-              >
-                <div>
-                  <h3>{endpoint.name}</h3>
-                  <p>{endpoint.desc}</p>
-                </div>
-                <span className={styles.endpointArrow}>→</span>
+            <div className={styles.buttons}>
+              <a href="/docs/intro" className={styles.primaryBtn}>
+                <span>Read the Docs</span>
+                <span className={styles.arrow}>→</span>
               </a>
-            ))}
+              <a
+                href="/postman/collection.json"
+                download="V3-External-API.postman_collection.json"
+                className={styles.secondaryBtn}
+              >
+                <svg
+                  className={styles.btnIcon}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                </svg>
+                <span>Download Postman Collection</span>
+              </a>
+            </div>
+
+            <div className={styles.stats}>
+              <div className={styles.stat}>
+                <div className={`${styles.statDot} ${styles.green}`} />
+                <span>99.9% Uptime</span>
+              </div>
+              <div className={styles.statDivider} />
+              <div className={styles.stat}>
+                <div className={`${styles.statDot} ${styles.blue}`} />
+                <span>&lt;10ms Response</span>
+              </div>
+              <div className={styles.statDivider} />
+              <div className={styles.stat}>
+                <div className={`${styles.statDot} ${styles.violet}`} />
+                <span>RESTful Architecture</span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </Layout>
+
+        <div className={styles.features}>
+          <div className={styles.container}>
+            <div className={styles.grid}>
+              <FeatureCard
+                icon="⚡"
+                title="Developer Experience"
+                description="Intuitive API design with clear documentation, interactive examples, and comprehensive code samples in multiple languages."
+              />
+              <FeatureCard
+                icon="🔐"
+                title="Enterprise Security"
+                description="Built with Rust for memory safety. Robust authentication, encryption, and data protection mechanisms ensure your data stays secure."
+              />
+              <FeatureCard
+                icon="🚀"
+                title="High Performance"
+                description="Optimized endpoints with sub-10ms latency, intelligent caching, and 99.9% uptime SLA guarantee for mission-critical operations."
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.endpoints}>
+          <div className={styles.container}>
+            <div className={styles.sectionHeader}>
+              <h2 className={styles.sectionTitle}>API Endpoints</h2>
+              <p className={styles.sectionSubtitle}>
+                Complete REST API for email infrastructure management
+              </p>
+            </div>
+
+            <div className={styles.endpointGrid}>
+              {[
+                {
+                  name: "Health",
+                  desc: "System monitoring and status",
+                  path: "/docs/api/health",
+                  category: "System",
+                },
+                {
+                  name: "Self API Check",
+                  desc: "Verify API functionality",
+                  path: "/docs/api/self-checks",
+                  category: "System",
+                },
+                {
+                  name: "Domain Management",
+                  desc: "Create and manage email domains",
+                  path: "/docs/api/domains",
+                  category: "Core",
+                },
+                {
+                  name: "Mailbox Management",
+                  desc: "Handle user mailboxes",
+                  path: "/docs/api/mailboxes",
+                  category: "Core",
+                },
+                {
+                  name: "Caution Management",
+                  desc: "Configure email cautions",
+                  path: "/docs/api/cautions",
+                  category: "Security",
+                },
+                {
+                  name: "Disclaimer Management",
+                  desc: "Set up email disclaimers",
+                  path: "/docs/api/disclaimers",
+                  category: "Content",
+                },
+                {
+                  name: "Department Management",
+                  desc: "Organize mailboxes by department",
+                  path: "/docs/api/departments",
+                  category: "Organization",
+                },
+                {
+                  name: "Filter Policy",
+                  desc: "Configure email filtering rules",
+                  path: "/docs/api/filter-policies",
+                  category: "Policy",
+                },
+                {
+                  name: "General Policy",
+                  desc: "Set overall email policies",
+                  path: "/docs/api/general-policies",
+                  category: "Policy",
+                },
+                {
+                  name: "Attachment Policy",
+                  desc: "Control attachment handling",
+                  path: "/docs/api/attachment-policies",
+                  category: "Policy",
+                },
+                {
+                  name: "Restriction Policy",
+                  desc: "Define IP and geographic restrictions",
+                  path: "/docs/api/restriction-policies",
+                  category: "Security",
+                },
+                {
+                  name: "Forwarding Policy",
+                  desc: "Manage email forwarding rules",
+                  path: "/docs/api/forwarding-policies",
+                  category: "Routing",
+                },
+                {
+                  name: "Distribution Policy",
+                  desc: "Handle email distribution lists",
+                  path: "/docs/api/distribution-policies",
+                  category: "Routing",
+                },
+              ].map((endpoint, idx) => (
+                <a
+                  key={idx}
+                  href={`${endpoint.path}`}
+                  className={styles.endpointCard}
+                >
+                  <div className={styles.endpointContent}>
+                    <div className={styles.endpointHeader}>
+                      <h3 className={styles.endpointTitle}>{endpoint.name}</h3>
+                      {/* <span className={styles.endpointCategory}>{endpoint.category}</span> */}
+                    </div>
+                    <p className={styles.endpointDesc}>{endpoint.desc}</p>
+                  </div>
+                  <span className={styles.endpointArrow}>→</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </Layout>
+
+      <style>
+        {`
+ 
+ @media (min-width: 768px){
+
+ .navbar {
+  position: absolute;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  width: 100%;
+  max-width: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.navbar__inner {
+  padding: 1.5rem 0;
+}
+ }
+
+        
+`}
+      </style>
+    </>
   );
 }

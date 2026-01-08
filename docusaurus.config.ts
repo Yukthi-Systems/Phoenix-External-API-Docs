@@ -1,97 +1,104 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
+import { themes as prismThemes } from "prism-react-renderer";
+import type { Config } from "@docusaurus/types";
+import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: 'V3 External API',
-  tagline: 'Complete API documentation for V3 External API',
-  favicon: 'img/favicon.ico',
+  title: "V3 External API",
+  tagline: "High-performance REST API for email infrastructure",
+  favicon: "img/favicon.ico",
 
   future: {
     v4: true,
   },
 
-  url: 'https://v3-api.docs.yukthi.net',
-  baseUrl: '/',
+  url: "https://v3-api.docs.yukthi.net",
+  baseUrl: "/",
 
-  organizationName: 'Yukthi-Systems',
-  projectName: 'V3-External-API',
+  organizationName: "Yukthi-Systems",
+  projectName: "V3-External-API",
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: "throw",
 
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       {
         docs: {
-          sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/Yukthi-Systems/V3-External-API-Docs/tree/main/',
+          sidebarPath: "./sidebars.ts",
+          editUrl:
+            "https://github.com/Yukthi-Systems/V3-External-API-Docs/tree/main/",
         },
         blog: false,
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
     ],
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    image: "img/logo-new.png",
+    metadata: [
+      {name: 'description', content: 'Programmatically manage Domains, Cautions, Disclaimers, and Departments with our robust REST API'},
+      {property: 'og:title', content: 'V3 External API Documentation'},
+      {property: 'og:description', content: 'High-performance REST API for email infrastructure'},
+      {property: 'og:image', content: 'https://v3-api.docs.yukthi.net/img/logo-new.png'},
+      {property: 'og:type', content: 'website'},
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {name: 'twitter:title', content: 'V3 External API Documentation'},
+      {name: 'twitter:description', content: 'High-performance REST API for email infrastructure'},
+      {name: 'twitter:image', content: 'https://v3-api.docs.yukthi.net/img/logo-new.png'},
+    ],
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'V3 External API',
+      title: "V3 External API",
       logo: {
-        alt: 'V3 API Logo',
-        src: 'img/logo.svg',
+        alt: "V3 API Logo",
+        src: "img/logo-new.png",
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'apiSidebar',
-          position: 'left',
-          label: 'Docs',
-        },
-        {
-          href: 'https://github.com/Yukthi-Systems/V3-External-API-Docs',
-          label: 'GitHub',
-          position: 'right',
+          type: "docSidebar",
+          sidebarId: "apiSidebar",
+          position: "left",
+          label: "Docs",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Documentation',
+          title: "Documentation",
           items: [
             {
-              label: 'Getting Started',
-              to: '/docs/intro',
+              label: "Getting Started",
+              to: "/docs/intro",
             },
             {
-              label: 'API Reference',
-              to: '/docs/api/health',
+              label: "API Reference",
+              to: "/docs/api/health",
             },
           ],
         },
         {
-          title: 'Resources',
+          title: "Resources",
           items: [
             {
-              label: 'GitHub',
-              href: 'https://github.com/Yukthi-Systems/V3-External-API-Docs',
+              label: "GitHub",
+              href: "https://github.com/Yukthi-Systems/V3-External-API-Docs",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Yukthi Systems. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Yukthi Systems. All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,
