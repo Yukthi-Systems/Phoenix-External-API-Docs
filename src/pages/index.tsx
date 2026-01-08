@@ -244,7 +244,9 @@ export default function Home() {
 }
  }
 
- 
+ .navbar__search {
+ display: none !important;
+}
         
 `}
       </style>
