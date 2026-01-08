@@ -7,6 +7,7 @@ High-performance REST API documentation for email infrastructure management buil
 
 - **Modern UI**: Clean, responsive design with dark/light theme support
 - **Interactive Documentation**: Comprehensive API reference with code examples
+- **Fast Search**: Built-in search functionality for quick navigation
 - **Mobile Friendly**: Optimized for all devices
 - **Easy Updates**: Just edit markdown files to update docs
 
