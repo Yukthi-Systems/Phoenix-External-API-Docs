@@ -1,46 +1,106 @@
-# Check API Health
+---
+title: API Health
+---
 
-This endpoint allows you to check the health status of the API service. It is useful for monitoring and ensuring that the API is operational.
+# API Health
 
-## Endpoint
+Confirms that the API server, its PostgreSQL connection pool, and its Redis cache are all reachable. This is a single combined check — a `200` means every dependency responded — so it's a good fit for load balancer and uptime-monitor probes.
 
-`GET /api/health/check`
+<ApiEndpoint method="GET" path="/health/api" auth={false} />
 
-```sh
-curl --location 'https://v3-api.test.yukthi.net/health/status'
+## Headers
+
+This endpoint does not require an `X-API-Key` header, so it can be safely wired into external monitoring tools without a credential.
+
+| Header | Required | Description |
+|--------|----------|--------------|
+| — | — | No headers required |
+
+## Request
+
+No path parameters, query parameters, or request body.
+
+<Tabs groupId="code-samples">
+<TabItem value="curl" label="cURL">
+
+```bash
+curl --location 'https://v3-api.test.yukthi.net/health/api'
 ```
 
-Response:
+</TabItem>
+<TabItem value="node" label="Node.js">
+
+```js
+const response = await fetch('https://v3-api.test.yukthi.net/health/api');
+const status = await response.text();
+
+console.log(status);
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+import requests
+
+response = requests.get('https://v3-api.test.yukthi.net/health/api')
+print(response.text)
+```
+
+</TabItem>
+</Tabs>
+
+## Response
+
+<Tabs groupId="response-status">
+<TabItem value="200" label="200 OK">
+
+The API, database, and cache are all reachable.
+
+```text
+API is healthy!
+```
+
+</TabItem>
+<TabItem value="424" label="424 Failed Dependency">
+
+The PostgreSQL connection pool is exhausted or misconfigured.
 
 ```json
 {
-    "api": "OK",
-    "cache": "OK",
-    "database": "OK"
+  "error": "DB: <pool error details>"
 }
 ```
 
-Failed Response Example:
+</TabItem>
+<TabItem value="417" label="417 Expectation Failed">
+
+The database driver returned an error while running the health query (e.g. connectivity was lost mid-check).
 
 ```json
 {
-    "api": "OK",
-    "cache": "ERROR",
-    "database": "ERROR"
+  "error": "PostgreSQL: <driver error details>"
 }
 ```
 
-## Response Fields
+</TabItem>
+<TabItem value="503" label="503 Service Unavailable">
 
-- `api`: Status of the API service. Possible values are "OK" or "ERROR".
-- `cache`: Status of the caching service. Possible values are "OK" or "ERROR".
-- `database`: Status of the database service. Possible values are "OK" or "ERROR
+Redis could not be reached.
 
-## Notes
+```json
+{
+  "error": "Redis: <connection error details>"
+}
+```
 
-- A status of "OK" indicates that the respective service is functioning properly, while "ERROR" indicates an issue that needs attention.
-- Its a GET endpoint and does not require any request body.
-- Permissions: This endpoint is publicly accessible and does not require authentication.
-- Rate Limiting: This endpoint is not subject to rate limiting.
-- Caching: Responses from this endpoint are not cached to ensure real-time health status.
-- Timeout: The request to this endpoint should complete within 5 seconds.
+</TabItem>
+</Tabs>
+
+## Errors
+
+| Status | Meaning |
+|--------|---------|
+| `424` | PostgreSQL connection pool error |
+| `417` | PostgreSQL query/driver error |
+| `503` | Redis connection error |

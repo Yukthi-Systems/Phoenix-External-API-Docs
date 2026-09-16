@@ -59,7 +59,7 @@ const config: Config = {
       {
         name: "description",
         content:
-          "Programmatically manage Domains, Cautions, Disclaimers, and Departments with our robust REST API",
+          "Reference docs for the V3 External API — a Rust/Actix REST API for email infrastructure, currently in early-stage development.",
       },
       { property: "og:title", content: "V3 External API Documentation" },
       {

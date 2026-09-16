@@ -43,9 +43,9 @@ export default function Home() {
             </h1>
 
             <p className={styles.subtitle}>
-              Programmatically manage Domains, Cautions, Disclaimers, and
-              Departments with our robust, secure, and high-performance REST
-              API.
+              A Rust-powered REST API for email infrastructure, built with
+              API key authentication and a growing set of endpoints —
+              currently in early-stage development.
             </p>
 
             <div className={styles.buttons}>
@@ -117,89 +117,23 @@ export default function Home() {
             <div className={styles.sectionHeader}>
               <h2 className={styles.sectionTitle}>API Endpoints</h2>
               <p className={styles.sectionSubtitle}>
-                Complete REST API for email infrastructure management
+                A growing REST API for email infrastructure, in early-stage development
               </p>
             </div>
 
             <div className={styles.endpointGrid}>
               {[
                 {
-                  name: "Health",
-                  desc: "System monitoring and status",
+                  name: "API Health",
+                  desc: "Verify the API, database, and cache are reachable",
                   path: "/docs/api/health",
                   category: "System",
                 },
                 {
-                  name: "Self API Check",
-                  desc: "Verify API functionality",
-                  path: "/docs/api/self-checks",
-                  category: "System",
-                },
-                {
-                  name: "Domain Management",
-                  desc: "Create and manage email domains",
-                  path: "/docs/api/domains",
-                  category: "Core",
-                },
-                {
-                  name: "Mailbox Management",
-                  desc: "Handle user mailboxes",
-                  path: "/docs/api/mailboxes",
-                  category: "Core",
-                },
-                {
-                  name: "Caution Management",
-                  desc: "Configure email cautions",
-                  path: "/docs/api/cautions",
-                  category: "Security",
-                },
-                {
-                  name: "Disclaimer Management",
-                  desc: "Set up email disclaimers",
-                  path: "/docs/api/disclaimers",
-                  category: "Content",
-                },
-                {
-                  name: "Department Management",
-                  desc: "Organize mailboxes by department",
-                  path: "/docs/api/departments",
-                  category: "Organization",
-                },
-                {
-                  name: "Filter Policy",
-                  desc: "Configure email filtering rules",
-                  path: "/docs/api/filter-policies",
-                  category: "Policy",
-                },
-                {
-                  name: "General Policy",
-                  desc: "Set overall email policies",
-                  path: "/docs/api/general-policies",
-                  category: "Policy",
-                },
-                {
-                  name: "Attachment Policy",
-                  desc: "Control attachment handling",
-                  path: "/docs/api/attachment-policies",
-                  category: "Policy",
-                },
-                {
-                  name: "Restriction Policy",
-                  desc: "Define IP and geographic restrictions",
-                  path: "/docs/api/restriction-policies",
-                  category: "Security",
-                },
-                {
-                  name: "Forwarding Policy",
-                  desc: "Manage email forwarding rules",
-                  path: "/docs/api/forwarding-policies",
-                  category: "Routing",
-                },
-                {
-                  name: "Distribution Policy",
-                  desc: "Handle email distribution lists",
-                  path: "/docs/api/distribution-policies",
-                  category: "Routing",
+                  name: "Self",
+                  desc: "Inspect your API key's organization and permissions",
+                  path: "/docs/api/self",
+                  category: "Auth",
                 },
               ].map((endpoint, idx) => (
                 <a
