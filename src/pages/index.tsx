@@ -23,7 +23,7 @@ function FeatureCard({
 export default function Home() {
   return (
     <>
-      <Layout title="Home" description="V3 External API Documentation">
+      <Layout title="Home" description="Phoenix Admin API Documentation">
         <div className={`${styles.hero}  homepage`}>
           <div className={styles.gradientBlur1} />
           <div className={styles.gradientBlur2} />
@@ -33,13 +33,13 @@ export default function Home() {
             <div className={styles.badge}>
               <span className={styles.pulse} />
               <span className={styles.pulseDot} />
-              Version 3.0 Live
+              Public Preview
             </div>
 
             <h1 className={styles.title}>
               Build faster with
               <br />
-              <span className={styles.titleGradient}>our External API</span>
+              <span className={styles.titleGradient}>the Phoenix Admin API</span>
             </h1>
 
             <p className={styles.subtitle}>
@@ -55,7 +55,7 @@ export default function Home() {
               </a>
               <a
                 href="/postman/collection.json"
-                download="V3-External-API.postman_collection.json"
+                download="Phoenix-Admin-API.postman_collection.json"
                 className={styles.secondaryBtn}
               >
                 <svg

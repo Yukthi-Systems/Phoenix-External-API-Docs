@@ -24,14 +24,14 @@ No path parameters, query parameters, or request body.
 <TabItem value="curl" label="cURL">
 
 ```bash
-curl --location 'https://v3-api.test.yukthi.net/health/api'
+curl --location '<BASE_URL>/health/api'
 ```
 
 </TabItem>
 <TabItem value="node" label="Node.js">
 
 ```js
-const response = await fetch('https://v3-api.test.yukthi.net/health/api');
+const response = await fetch('<BASE_URL>/health/api');
 const status = await response.text();
 
 console.log(status);
@@ -43,7 +43,7 @@ console.log(status);
 ```python
 import requests
 
-response = requests.get('https://v3-api.test.yukthi.net/health/api')
+response = requests.get('<BASE_URL>/health/api')
 print(response.text)
 ```
 

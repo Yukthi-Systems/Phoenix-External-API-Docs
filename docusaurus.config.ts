@@ -3,7 +3,7 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "V3 External API",
+  title: "Phoenix Admin API",
   tagline: "High-performance REST API for email infrastructure",
   favicon: "img/favicon.ico",
 
@@ -11,11 +11,11 @@ const config: Config = {
     v4: true,
   },
 
-  url: "https://v3-api.docs.yukthi.net",
+  url: "https://docs.yukthi.net",
   baseUrl: "/",
 
   organizationName: "Yukthi-Systems",
-  projectName: "V3-External-API",
+  projectName: "Phoenix-Admin-API-Docs",
 
   onBrokenLinks: "throw",
 
@@ -59,36 +59,36 @@ const config: Config = {
       {
         name: "description",
         content:
-          "Reference docs for the V3 External API — a Rust/Actix REST API for email infrastructure, currently in early-stage development.",
+          "Reference docs for the Phoenix Admin API — a Rust/Actix REST API for email infrastructure, currently in early-stage development.",
       },
-      { property: "og:title", content: "V3 External API Documentation" },
+      { property: "og:title", content: "Phoenix Admin API Documentation" },
       {
         property: "og:description",
         content: "High-performance REST API for email infrastructure",
       },
       {
         property: "og:image",
-        content: "https://v3-api.docs.yukthi.net/img/logo-new.png",
+        content: "https://docs.yukthi.net/img/logo-new.png",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "V3 External API Documentation" },
+      { name: "twitter:title", content: "Phoenix Admin API Documentation" },
       {
         name: "twitter:description",
         content: "High-performance REST API for email infrastructure",
       },
       {
         name: "twitter:image",
-        content: "https://v3-api.docs.yukthi.net/img/logo-new.png",
+        content: "https://docs.yukthi.net/img/logo-new.png",
       },
     ],
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: "V3 External API",
+      title: "Phoenix Admin API",
       logo: {
-        alt: "V3 API Logo",
+        alt: "Phoenix Admin API Logo",
         src: "img/logo-new.png",
       },
       items: [

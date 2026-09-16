@@ -1,6 +1,6 @@
-# V3 External API Documentation
+# Phoenix Admin API Documentation
 
-High-performance REST API documentation for email infrastructure management built with Docusaurus.
+REST API documentation for Phoenix Admin's email infrastructure management, built with Docusaurus.
 
 
 ## 🚀 Features
@@ -20,10 +20,10 @@ High-performance REST API documentation for email infrastructure management buil
 
 ```bash
 # Clone the repository
-git clone https://github.com/Yukthi-Systems/V3-External-API-Docs.git
+git clone https://github.com/Yukthi-Systems/V3-External-Api-Docs.git
 
 # Navigate to the project
-cd V3-External-API-Docs
+cd V3-External-Api-Docs
 
 # Install dependencies
 npm install
@@ -51,7 +51,7 @@ npm run serve
 ## 📁 Project Structure
 
 ```
-V3-External-API-Docs/
+Phoenix-Admin-API-Docs/
 ├── docs/                  # Documentation markdown files
 │   ├── intro.md
 │   └── api/              # API endpoint documentation
@@ -106,17 +106,16 @@ Modify `docusaurus.config.ts` for site-wide settings.
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+GPLv3 — see [`LICENSE`](LICENSE).
 
 ## 🔗 Links
 
-- [Live Documentation](https://v3-api.docs.yukthi.net)
-- [Report Issues](https://github.com/Yukthi-Systems/V3-External-API-Docs/issues)
+- [Report Issues](https://github.com/Yukthi-Systems/V3-External-Api-Docs/issues)
 - [Docusaurus Documentation](https://docusaurus.io/)
 
 ## 💡 Support
 
-For questions or support, please [open an issue](https://github.com/Yukthi-Systems/V3-External-API-Docs/issues).
+For questions or support, please [open an issue](https://github.com/Yukthi-Systems/V3-External-Api-Docs/issues).
 
 ---
 

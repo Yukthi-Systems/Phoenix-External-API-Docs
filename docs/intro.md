@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Introduction
 
-Welcome to the V3 External API documentation. The API is built in Rust on Actix Web and is currently in **active early-stage development** — the reference below covers what's live today and will grow as new resources ship.
+Welcome to the Phoenix Admin API documentation. The API is built in Rust on Actix Web and is currently in **active early-stage development** — the reference below covers what's live today and will grow as new resources ship.
 
 :::warning Early Stage
 This API is public and under active development. Endpoints, request/response shapes, and permission names may change without a deprecation period until the API reaches a stable release.
@@ -12,13 +12,13 @@ This API is public and under active development. Endpoints, request/response sha
 
 ## Base URL
 
+Every request in this reference is shown against a placeholder:
+
 ```
-https://v3-api.test.yukthi.net
+<BASE_URL>
 ```
 
-:::warning Test Environment
-This is a test environment and is not intended for production use. For production access, please contact us to obtain the correct base URL.
-:::
+Replace `<BASE_URL>` with the base URL for your environment. Contact us if you don't have one yet.
 
 ## What's available today
 

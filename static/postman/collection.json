@@ -1,14 +1,14 @@
 {
 	"info": {
 		"_postman_id": "d41ca6ce-2710-4610-b37e-484d488007bd",
-		"name": "V3 External API",
-		"description": "Reference collection for the V3 External API. Currently in early-stage development — endpoints will grow over time.",
+		"name": "Phoenix Admin API",
+		"description": "Reference collection for the Phoenix Admin API. Currently in early-stage development — endpoints will grow over time.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"variable": [
 		{
 			"key": "BASE_URL",
-			"value": "https://v3-api.test.yukthi.net"
+			"value": ""
 		},
 		{
 			"key": "API_KEY",

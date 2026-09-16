@@ -22,7 +22,7 @@ No path parameters, query parameters, or request body.
 <TabItem value="curl" label="cURL">
 
 ```bash
-curl --location 'https://v3-api.test.yukthi.net/self/who-am-i' \
+curl --location '<BASE_URL>/self/who-am-i' \
 --header 'x-api-key: 530b2473-b224-5f54-9185-89189ee72df8'
 ```
 
@@ -30,7 +30,7 @@ curl --location 'https://v3-api.test.yukthi.net/self/who-am-i' \
 <TabItem value="node" label="Node.js">
 
 ```js
-const response = await fetch('https://v3-api.test.yukthi.net/self/who-am-i', {
+const response = await fetch('<BASE_URL>/self/who-am-i', {
   headers: {
     'x-api-key': '530b2473-b224-5f54-9185-89189ee72df8',
   },
@@ -47,7 +47,7 @@ console.log(session);
 import requests
 
 response = requests.get(
-    'https://v3-api.test.yukthi.net/self/who-am-i',
+    '<BASE_URL>/self/who-am-i',
     headers={'x-api-key': '530b2473-b224-5f54-9185-89189ee72df8'},
 )
 print(response.json())

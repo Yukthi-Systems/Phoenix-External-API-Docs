@@ -7,7 +7,7 @@ function Footer(): ReactNode {
       <div className={styles.footerContent}>
         <div className={styles.footerGrid}>
           <div className={styles.footerBrand}>
-            <h3 className={styles.brandTitle}>V3 External API</h3>
+            <h3 className={styles.brandTitle}>Phoenix Admin API</h3>
             <p className={styles.brandTagline}>
               High-performance REST API for email infrastructure
             </p>
@@ -15,14 +15,14 @@ function Footer(): ReactNode {
 
           <div className={styles.footerLinks}>
             <a href="/docs/intro">Documentation</a>
-            <a href="/docs/api/domains">API Reference</a>
+            <a href="/docs/api/health">API Reference</a>
             <a href="/postman/collection.json" download>Postman Collection</a>
           </div>
         </div>
 
         <div className={styles.footerBottom}>
           <div className={styles.copyright}>
-            © {new Date().getFullYear()} V3 External API
+            © {new Date().getFullYear()} Phoenix Admin API
           </div>
           <div className={styles.status}>
             <span className={styles.statusDot} />
