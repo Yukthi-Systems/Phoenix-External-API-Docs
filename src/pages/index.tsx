@@ -135,6 +135,30 @@ export default function Home() {
                   path: "/docs/api/self",
                   category: "Auth",
                 },
+                {
+                  name: "Organization",
+                  desc: "Read your organization's quota and enabled services",
+                  path: "/docs/api/organization",
+                  category: "Core",
+                },
+                {
+                  name: "Domains",
+                  desc: "List domains and update domain settings",
+                  path: "/docs/api/domains",
+                  category: "Core",
+                },
+                {
+                  name: "Identities",
+                  desc: "Manage identities and reset passwords",
+                  path: "/docs/api/identities",
+                  category: "Core",
+                },
+                {
+                  name: "Departments",
+                  desc: "Full CRUD for organizing identities",
+                  path: "/docs/api/departments",
+                  category: "Core",
+                },
               ].map((endpoint, idx) => (
                 <a
                   key={idx}

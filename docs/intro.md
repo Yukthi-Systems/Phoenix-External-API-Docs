@@ -24,17 +24,22 @@ Replace `<BASE_URL>` with the base URL for your environment. Contact us if you d
 
 - **[API Health](./api/health)** — an unauthenticated check that the API, database, and cache are all reachable
 - **[Self](./api/self)** — inspect the organization and permissions tied to your API key, and refresh its cached session
+- **[Organization](./api/organization)** — read your organization's quota, identity allocation, and enabled services
+- **[Domains](./api/domains)** — list domains and update a limited set of domain settings
+- **[Identities](./api/identities)** — list, read, update, delete identities within a domain, and reset their passwords
+- **[Departments](./api/departments)** — full CRUD for organizing identities into departments
 
 ## Authentication at a glance
 
-Every protected endpoint expects an `X-API-Key` header. See the [Authentication](./authentication) guide for the full details, and [Who Am I](./api/self/who-am-i) to check what a key is allowed to do.
+Every protected endpoint expects an `X-API-Key` header, and most also require a specific permission on that key. See the [Authentication](./authentication) guide for the header details, [Permissions](./permissions) for the full permission list, and [Who Am I](./api/self/who-am-i) to check what a given key is allowed to do.
 
 ## What's coming next
 
-A number of resource modules — domains, mailboxes, departments, identities, and organization management — are scaffolded in the API but not yet exposed publicly. They'll be documented here as they ship.
+Mailbox management is scaffolded in the API but not yet exposed publicly. It'll be documented here once it ships.
 
 ## Getting Started
 
 1. **Check [API Health](./api/health)** to confirm you can reach the API
 2. **Read [Authentication](./authentication)** to obtain and use your `X-API-Key`
 3. **Call [Who Am I](./api/self/who-am-i)** to verify your key and see its permissions
+4. **Browse [Permissions](./permissions)** to see what each permission unlocks
