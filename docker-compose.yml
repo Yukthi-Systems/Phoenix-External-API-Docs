@@ -1,8 +1,8 @@
 services:
-  v3-external-api-docs:
-    image: rjyspl/v3-external-api-docs:latest
+  phoenix-external-api-docs:
+    image: rjyspl/phoenix-external-api-docs:latest
 
-    container_name: v3-external-api-docs
+    container_name: phoenix-external-api-docs
 
     ports:
       - '127.0.0.1:8682:3000'

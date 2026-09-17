@@ -4,6 +4,9 @@ FROM node:21.5-alpine3.18 AS builder
 # Set the working directory for the build stage
 WORKDIR /app
 
+# Install git (needed at build time: docs pages show "last updated by" from git log)
+RUN apk add --no-cache git
+
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
