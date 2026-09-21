@@ -5,23 +5,21 @@ const sidebars: SidebarsConfig = {
     'intro',
     'authentication',
     'permissions',
+    'errors',
     'api/health/index',
     {
       type: 'category',
       label: 'Self',
+      link: {
+        type: 'doc',
+        id: 'api/self/index',
+      },
       items: [
-        'api/self/index',
         'api/self/who-am-i',
         'api/self/refresh',
       ],
     },
-    {
-      type: 'category',
-      label: 'Organization',
-      items: [
-        'api/organization/index',
-      ],
-    },
+    'api/organization/index',
     {
       type: 'category',
       label: 'Domains',
@@ -45,6 +43,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'api/identities/list',
         'api/identities/get',
+        'api/identities/create',
         'api/identities/update',
         'api/identities/delete',
         'api/identities/reset-password',
