@@ -5,7 +5,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const DOWNLOAD_NAME = "Phoenix-Admin-API.postman_collection.json";
+const DOWNLOAD_NAME = "Admin-API.postman_collection.json";
 
 const dir = join(dirname(fileURLToPath(import.meta.url)), "..", "static", "postman");
 const hash = createHash("sha256")

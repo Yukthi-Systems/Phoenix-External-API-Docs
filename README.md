@@ -1,4 +1,4 @@
-# Phoenix Admin API Documentation
+# Admin API Documentation
 
 REST API documentation for Phoenix Admin's email infrastructure management, built with Docusaurus.
 

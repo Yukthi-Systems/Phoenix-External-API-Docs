@@ -3,7 +3,7 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "Phoenix Admin API",
+  title: "Admin API",
   tagline: "High-performance REST API for email infrastructure",
   favicon: "img/favicon.ico",
 
@@ -68,9 +68,9 @@ const config: Config = {
       {
         name: "description",
         content:
-          "Reference docs for the Phoenix Admin API — a Rust/Actix REST API for email infrastructure, currently in early-stage development.",
+          "Reference docs for the Admin API — a Rust/Actix REST API for email infrastructure, currently in early-stage development.",
       },
-      { property: "og:title", content: "Phoenix Admin API Documentation" },
+      { property: "og:title", content: "Admin API Documentation" },
       {
         property: "og:description",
         content: "High-performance REST API for email infrastructure",
@@ -81,7 +81,7 @@ const config: Config = {
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Phoenix Admin API Documentation" },
+      { name: "twitter:title", content: "Admin API Documentation" },
       {
         name: "twitter:description",
         content: "High-performance REST API for email infrastructure",
@@ -95,9 +95,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: "Phoenix Admin API",
+      title: "Admin API",
       logo: {
-        alt: "Phoenix Admin API Logo",
+        alt: "Admin API Logo",
         src: "img/logo-new.png",
       },
       items: [

@@ -19,7 +19,7 @@ API keys are created by an administrator in the Phoenix Admin Panel under **Sett
 
 Header names are not case-sensitive, so `X-API-Key` works too. Do not add a prefix such as `Bearer`.
 
-> **Base URL**: The root URL of the Phoenix Admin API. All API endpoints are accessed by appending the endpoint path to the Base URL. In the examples below, replace `<BASE_URL>` with this root URL and `<API_KEY>` with your API key.
+> **Base URL**: The root URL of the Admin API. All API endpoints are accessed by appending the endpoint path to the Base URL. In the examples below, replace `<BASE_URL>` with this root URL and `<API_KEY>` with your API key.
 
 <Tabs groupId="code-samples">
 <TabItem value="curl" label="cURL">

@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import styles from "./PostmanDownload.module.css";
 
-const FILE_NAME = "Phoenix-Admin-API.postman_collection.json";
+const FILE_NAME = "Admin-API.postman_collection.json";
 
 type Status = "idle" | "verifying" | "verified" | "failed";
 

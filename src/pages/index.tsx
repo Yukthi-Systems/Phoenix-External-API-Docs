@@ -24,7 +24,7 @@ function FeatureCard({
 export default function Home() {
   return (
     <>
-      <Layout title="Home" description="Phoenix Admin API Documentation">
+      <Layout title="Home" description="Admin API Documentation">
         <div className={`${styles.hero}  homepage`}>
           <div className={styles.gradientBlur1} />
           <div className={styles.gradientBlur2} />
@@ -36,7 +36,7 @@ export default function Home() {
             <h1 className={styles.title}>
               Build faster with
               <br />
-              <span className={styles.titleGradient}>the Phoenix Admin API</span>
+              <span className={styles.titleGradient}>the Admin API</span>
             </h1>
 
             <p className={styles.subtitle}>
