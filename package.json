@@ -5,6 +5,9 @@
   "license": "GPL-3.0-or-later",
   "scripts": {
     "docusaurus": "docusaurus",
+    "checksum": "node scripts/generate-postman-checksum.mjs",
+    "prestart": "npm run checksum",
+    "prebuild": "npm run checksum",
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",

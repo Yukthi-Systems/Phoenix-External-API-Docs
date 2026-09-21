@@ -1,5 +1,6 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
+import PostmanDownload from "../components/PostmanDownload";
 import styles from "./index.module.css";
 
 function FeatureCard({
@@ -48,22 +49,10 @@ export default function Home() {
                 <span>Read the Docs</span>
                 <span className={styles.arrow}>→</span>
               </a>
-              <a
-                href="/postman/collection.json"
-                download="Phoenix-Admin-API.postman_collection.json"
-                className={styles.secondaryBtn}
-              >
-                <svg
-                  className={styles.btnIcon}
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
-                </svg>
-                <span>Download Postman Collection</span>
-              </a>
+              <PostmanDownload
+                buttonClassName={styles.secondaryBtn}
+                iconClassName={styles.btnIcon}
+              />
               <a
                 href="https://github.com/Yukthi-Systems/Phoenix-External-API"
                 target="_blank"

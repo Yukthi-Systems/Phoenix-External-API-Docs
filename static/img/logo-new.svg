@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Phoenix Admin API">
+  <defs>
+    <linearGradient id="g" x1="70" y1="40" x2="442" y2="472" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <polygon points="256,42 441.3,149 441.3,363 256,470 70.7,363 70.7,149" fill="url(#g)" stroke="url(#g)" stroke-width="36" stroke-linejoin="round"/>
+  <g fill="none" stroke="#fff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M196 194 138 256 196 318"/>
+    <path d="M316 194 374 256 316 318"/>
+    <path d="M278 184 234 328"/>
+  </g>
+</svg>
