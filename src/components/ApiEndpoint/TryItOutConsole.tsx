@@ -2,6 +2,7 @@ import React, { useState, useMemo, type ReactNode } from "react";
 import clsx from "clsx";
 import { useApiConfig } from "@site/src/context/ApiConfigContext";
 import { getEndpointDetails } from "@site/src/utils/apiRegistry";
+import { JsonViewer } from "./JsonViewer";
 import {
   PlayIcon,
   SettingsIcon,
@@ -25,6 +26,7 @@ interface ResponseState {
   durationMs: number;
   headers: Record<string, string>;
   body: string;
+  json: unknown;
   isJson: boolean;
 }
 
@@ -166,11 +168,12 @@ export function TryItOutConsole({
 
       const rawText = await res.text();
       let formattedBody = rawText;
+      let parsedJson: unknown = null;
       let isJson = false;
 
       try {
-        const json = JSON.parse(rawText);
-        formattedBody = JSON.stringify(json, null, 2);
+        parsedJson = JSON.parse(rawText);
+        formattedBody = JSON.stringify(parsedJson, null, 2);
         isJson = true;
       } catch {
         isJson = false;
@@ -182,6 +185,7 @@ export function TryItOutConsole({
         durationMs,
         headers: resHeaders,
         body: formattedBody,
+        json: parsedJson,
         isJson,
       });
     } catch (err: any) {
@@ -191,9 +195,16 @@ export function TryItOutConsole({
     }
   };
 
+  const headersText = response
+    ? Object.entries(response.headers)
+        .map(([k, v]) => `${k}: ${v}`)
+        .join("\n")
+    : "";
+
   const handleCopyResponse = () => {
-    if (!response?.body) return;
-    navigator.clipboard.writeText(response.body);
+    const text = activeTab === "body" ? response?.body : headersText;
+    if (!text) return;
+    navigator.clipboard.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -394,44 +405,61 @@ export function TryItOutConsole({
               <button
                 type="button"
                 className={styles.utilityBtn}
-                onClick={() =>
-                  setActiveTab(activeTab === "body" ? "headers" : "body")
-                }
+                onClick={handleCopyResponse}
               >
-                {activeTab === "body" ? "Headers" : "Body"}
+                {copied ? (
+                  <>
+                    <CheckIcon /> Copied
+                  </>
+                ) : (
+                  <>
+                    <CopyIcon /> Copy
+                  </>
+                )}
               </button>
-              {activeTab === "body" && (
-                <button
-                  type="button"
-                  className={styles.utilityBtn}
-                  onClick={handleCopyResponse}
-                >
-                  {copied ? (
-                    <>
-                      <CheckIcon /> Copied
-                    </>
-                  ) : (
-                    <>
-                      <CopyIcon /> Copy
-                    </>
-                  )}
-                </button>
-              )}
             </div>
+          </div>
+
+          <div className={styles.resultTabs} role="tablist">
+            <button
+              type="button"
+              role="tab"
+              aria-selected={activeTab === "body"}
+              className={clsx(styles.resultTab, activeTab === "body" && styles.resultTabActive)}
+              onClick={() => setActiveTab("body")}
+            >
+              Body
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={activeTab === "headers"}
+              className={clsx(styles.resultTab, activeTab === "headers" && styles.resultTabActive)}
+              onClick={() => setActiveTab("headers")}
+            >
+              Headers
+              <span className={styles.resultTabCount}>{Object.keys(response.headers).length}</span>
+            </button>
           </div>
 
           <div className={styles.resultBox}>
             {activeTab === "body" ? (
-              <pre className={styles.resultCode}>
-                <code>{response.body || "(Empty Response)"}</code>
-              </pre>
+              response.isJson ? (
+                response.body ? (
+                  <JsonViewer value={response.json} />
+                ) : (
+                  <pre className={styles.resultCode}>
+                    <code>(Empty Response)</code>
+                  </pre>
+                )
+              ) : (
+                <pre className={styles.resultCode}>
+                  <code>{response.body || "(Empty Response)"}</code>
+                </pre>
+              )
             ) : (
               <pre className={styles.resultCode}>
-                <code>
-                  {Object.entries(response.headers)
-                    .map(([k, v]) => `${k}: ${v}`)
-                    .join("\n") || "(No Headers Received)"}
-                </code>
+                <code>{headersText || "(No Headers Received)"}</code>
               </pre>
             )}
           </div>
