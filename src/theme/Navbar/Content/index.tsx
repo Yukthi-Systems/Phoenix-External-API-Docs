@@ -17,6 +17,9 @@ import NavbarLogo from '@theme/Navbar/Logo';
 import NavbarSearch from '@theme/Navbar/Search';
 
 import styles from './styles.module.css';
+import { useApiConfig } from '@site/src/context/ApiConfigContext';
+import { SettingsIcon } from '@site/src/components/Icons';
+import { ApiSettingsModal } from '@site/src/components/ApiSettingsModal';
 
 function useNavbarItems() {
   // TODO temporary casting until ThemeConfig type is improved
@@ -73,6 +76,7 @@ function NavbarContentLayout({
 
 export default function NavbarContent(): ReactNode {
   const mobileSidebar = useNavbarMobileSidebar();
+  const { openModal, hasApiKey } = useApiConfig();
 
   const items = useNavbarItems();
   const [leftItems, rightItems] = splitNavbarItems(items);
@@ -80,28 +84,41 @@ export default function NavbarContent(): ReactNode {
   const searchBarItem = items.find((item) => item.type === 'search');
 
   return (
-    <NavbarContentLayout
-      left={
-        // TODO stop hardcoding items?
-        <>
-          {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
-          <NavbarLogo />
-          <NavbarItems items={leftItems} />
-        </>
-      }
-      right={
-        // TODO stop hardcoding items?
-        // Ask the user to add the respective navbar items => more flexible
-        <>
-          <NavbarItems items={rightItems} />
-          <NavbarColorModeToggle className={styles.colorModeToggle} />
-          {!searchBarItem && (
-            <NavbarSearch>
-              <SearchBar />
-            </NavbarSearch>
-          )}
-        </>
-      }
-    />
+    <>
+      <NavbarContentLayout
+        left={
+          // TODO stop hardcoding items?
+          <>
+            {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
+            <NavbarLogo />
+            <NavbarItems items={leftItems} />
+          </>
+        }
+        right={
+          // TODO stop hardcoding items?
+          // Ask the user to add the respective navbar items => more flexible
+          <>
+            <NavbarItems items={rightItems} />
+            <button
+              type="button"
+              className={styles.apiConfigButton}
+              onClick={openModal}
+              title="Configure API URL & Key"
+            >
+              <SettingsIcon />
+              <span className={styles.apiConfigLabel}>API Config</span>
+              {hasApiKey && <span className={styles.apiConfigDot} title="API Key active" />}
+            </button>
+            <NavbarColorModeToggle className={styles.colorModeToggle} />
+            {!searchBarItem && (
+              <NavbarSearch>
+                <SearchBar />
+              </NavbarSearch>
+            )}
+          </>
+        }
+      />
+      <ApiSettingsModal />
+    </>
   );
 }

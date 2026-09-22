@@ -14,3 +14,53 @@ See https://github.com/facebook/docusaurus/pull/11142
 :global(.navbar__items--right) > :last-child {
   padding-right: 0;
 }
+
+.apiConfigButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 0.625rem;
+  background: rgba(39, 39, 42, 0.6);
+  border: 1px solid rgba(63, 63, 70, 0.8);
+  color: #a1a1aa;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.apiConfigButton:hover {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: rgba(139, 92, 246, 0.5);
+  color: #c4b5fd;
+  transform: translateY(-1px);
+}
+
+[data-theme="light"] .apiConfigButton {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: #e4e4e7;
+  color: #52525b;
+}
+
+[data-theme="light"] .apiConfigButton:hover {
+  background: rgba(139, 92, 246, 0.08);
+  border-color: rgba(139, 92, 246, 0.3);
+  color: #7c3aed;
+}
+
+.apiConfigDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #34d399;
+  box-shadow: 0 0 6px rgba(52, 211, 153, 0.6);
+}
+
+@media (max-width: 576px) {
+  .apiConfigLabel {
+    display: none;
+  }
+}
+
