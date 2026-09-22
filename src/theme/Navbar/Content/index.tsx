@@ -1,5 +1,7 @@
 import React, {type ReactNode} from 'react';
 import clsx from 'clsx';
+import {useLocation} from '@docusaurus/router';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import {
   useThemeConfig,
   ErrorCauseBoundary,
@@ -83,6 +85,10 @@ export default function NavbarContent(): ReactNode {
 
   const searchBarItem = items.find((item) => item.type === 'search');
 
+  const { pathname } = useLocation();
+  const homePath = useBaseUrl('/');
+  const isHomePage = pathname === homePath;
+
   return (
     <>
       <NavbarContentLayout
@@ -99,16 +105,18 @@ export default function NavbarContent(): ReactNode {
           // Ask the user to add the respective navbar items => more flexible
           <>
             <NavbarItems items={rightItems} />
-            <button
-              type="button"
-              className={styles.apiConfigButton}
-              onClick={openModal}
-              title="Configure API URL & Key"
-            >
-              <SettingsIcon />
-              <span className={styles.apiConfigLabel}>API Config</span>
-              {hasApiKey && <span className={styles.apiConfigDot} title="API Key active" />}
-            </button>
+            {!isHomePage && (
+              <button
+                type="button"
+                className={styles.apiConfigButton}
+                onClick={openModal}
+                title="Configure API URL & Key"
+              >
+                <SettingsIcon />
+                <span className={styles.apiConfigLabel}>API Config</span>
+                {hasApiKey && <span className={styles.apiConfigDot} title="API Key active" />}
+              </button>
+            )}
             <NavbarColorModeToggle className={styles.colorModeToggle} />
             {!searchBarItem && (
               <NavbarSearch>
