@@ -565,14 +565,46 @@
 }
 
 .codeBlock {
-  margin: 0;
-  padding: 1.1rem 1.25rem;
+  margin: 0 !important;
+  padding: 1.1rem 1.25rem !important;
   font-family: var(--ifm-font-family-monospace, ui-monospace, monospace);
   font-size: 0.85rem;
   line-height: 1.7;
-  color: #e6edf3;
+  color: #e6edf3 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
   white-space: pre-wrap;
   word-break: break-word;
+}
+
+.codeBlock code {
+  color: inherit !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  line-height: inherit !important;
+  box-shadow: none !important;
+}
+
+[data-theme='light'] .codeBlock {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #e6edf3 !important;
+  border: none !important;
+}
+
+[data-theme='light'] .codeBlock code {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: inherit !important;
+  border: none !important;
 }
 
 .codeWindowDivider {
@@ -580,7 +612,7 @@
   align-items: center;
   gap: 0.6rem;
   padding: 0 1.25rem;
-  margin:12px 4px
+  margin: 0.5rem 0;
 }
 
 .codeWindowDividerLine {
@@ -602,10 +634,10 @@
   white-space: nowrap;
 }
 
-.tokMuted { color: #8b949e; }
-.tokString { color: #a5d6ff; }
-.tokKey { color: #c4b5fd; }
-.tokNumber { color: #79c0ff; }
+.tokMuted { color: #8b949e !important; }
+.tokString { color: #a5d6ff !important; }
+.tokKey { color: #c4b5fd !important; }
+.tokNumber { color: #79c0ff !important; }
 
 @media (max-width: 900px) {
   .quickstartGrid {
