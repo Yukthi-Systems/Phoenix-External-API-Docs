@@ -31,6 +31,7 @@ A few errors come back as **plain text** instead of JSON — an invalid API key,
 | `422 Unprocessable Entity` | `Unprocessable:` | The password fails a [password rule](./api/identities/reset-password#password-rules) | Choose a stronger password |
 | `417 Expectation Failed` | `PostgreSQL error:` | The database rejected the change — most often a **duplicate** (same department name, or an email that already exists) or a reference to an ID that doesn't exist | Check for duplicates and that referenced IDs exist |
 | `424 Failed Dependency` | `DB:` | The API could not get a database connection | Retry later; contact support if it persists |
+| `429 Too Many Requests` | — | The API key has made more than 300 requests in the current 10-minute window — see [Rate Limits](./rate-limits) | Wait and retry later |
 | `503 Service Unavailable` | `Redis:` | The API's cache is unreachable | Retry later; contact support if it persists |
 
 :::note Get endpoints return `null`, not 404

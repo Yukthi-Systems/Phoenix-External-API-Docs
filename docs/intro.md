@@ -45,7 +45,7 @@ In the code samples, the base URL is written as `<BASE_URL>` and your key as `<A
 | [Departments](./api/departments) | Create, list, read, update and delete departments |
 | [Mailboxes](./api/mailbox) | Create, list, read, update and delete mailboxes, and manage their storage quota |
 
-Before you build, it is worth reading [Errors](./errors) (the error format and what each status code means).
+Before you build, it is worth reading [Errors](./errors) (the error format and what each status code means) and [Rate Limits](./rate-limits) (each API key can make **300 requests per 10 minutes**).
 
 ## Tools and source code
 

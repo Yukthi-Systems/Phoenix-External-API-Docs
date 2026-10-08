@@ -7,6 +7,7 @@ const sidebars: SidebarsConfig = {
     'authentication',
     'permissions',
     'errors',
+    'rate-limits',
     'api/health/index',
     {
       type: 'category',
